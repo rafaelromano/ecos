@@ -20,39 +20,22 @@
             <br>
             <?php
             include "conexao.php";
-            $busca = "SELECT * FROM Ciclos";
-            $total_reg = "10"; // número de registros por página
-            $pagina=$_GET['pagina'];
-            if (!$pagina) {
-                $pc = "1";
-            } else {
-                $pc = $pagina;
-            }
-            $inicio = $pc - 1;
-            $inicio = $inicio * $total_reg;
-            $limite = mysqli_query("$busca LIMIT $inicio,$total_reg");
-            $todos = mysqli_query("$busca");
 
-            $tr = mysqli_num_rows($todos); // verifica o número total de registros
-            $tp = $tr / $total_reg; // verifica o número total de páginas
-
-            // vamos criar a visualização
-            while ($dados = mysql_fetch_array($limite)) {
-                $nome = $dados["nome"];
-                echo "Nome: $nome<br>";
-            }
-
-            // agora vamos criar os botões "Anterior e próximo"
-            $anterior = $pc -1;
-            $proximo = $pc +1;
-            if ($pc>1) {
-                echo " <a href='?pagina=$anterior'><- Anterior</a> ";
-            }
-            echo "|";
-            if ($pc<$tp) {
-                echo " <a href='?pagina=$proximo'>Próxima -></a>";
-            }
+            echo'<table width="88%" height="10" cellspacing="0" cellpadding="0"><tr>';
             
+            $stmt = $conn->prepare("SELECT * FROM `Ciclos` ORDER BY `id` ASC ");
+            $stmt->execute( );
+            $linha = $stmt->fetch(PDO::FETCH_ASSOC);
+            while($linha = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                echo "<b>Ciclo:"; 
+                ?>
+                <a href="NovoCiclo.php?codigo<?php echo $row["Codigo"]; ?>">
+                <?php
+                echo "</b>" . $row["Titulo-ciclo-aberto"]."</a>";
+                echo "<b> - Data Inicial:</b> ".$row["Data-inicio-geral"];
+                echo "<b> - Data Final: </b>".$row["Data-fim-geral"]."<br><br>";
+            }
+            echo "</tr></table>";
 
 
             mysqli_close($conn);
