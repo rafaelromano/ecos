@@ -14,8 +14,10 @@
 <table  width=95%>
     <tr>
         <td bgcolor="#E6E6E6">
+            <br>
             <p class='titulo'>CICLOS</p>
             <a href="NovoCiclo.php" class='subtitulo'>Novo Ciclo</a>
+            <br>
             <?php
             include "conexao.php";
             $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1; 
