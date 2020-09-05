@@ -55,7 +55,7 @@
                 <?php
                 if($pagina > 1) {
                     //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' tyle=\'width:150;height:20\' value='EXIBIR CICLOS ANTERIORES' class='button1></a>"; 
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' tyle=\'width:150;height:20\' value='EXIBIR CICLOS ANTERIORES' class='button1'></a>"; 
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {
@@ -66,7 +66,7 @@
     
                 if($pagina < $numPaginas) {
                     //echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' value='EXIBIR PRÓXIMOS CICLOS' class='button1></a>";
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' value='EXIBIR PRÓXIMOS CICLOS' class='button1'></a>";
                 }
                 mysqli_close($conn);
                 ?>
