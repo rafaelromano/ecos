@@ -33,10 +33,15 @@
     font-size: 14px;
 }
 
+.titulo1 {
+    font-family: "Times New Roman", Times, serif;
+    color: #0489B1;
+    font-size: 50px;
+}
 .titulo {
     font-family: "Times New Roman", Times, serif;
     color: #0489B1;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .subtitulo {

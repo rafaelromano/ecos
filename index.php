@@ -7,7 +7,7 @@
 <body>
 
 <p align="center"> 
-    <font size="20px" face="Verdana" color="#0489B1">  Feira Orgânico Solidário </font>
+<p class='titulo1'>Feira Orgânico Solidário </p>
 <br>
 <br>
 <br>
@@ -17,6 +17,7 @@
             <br>
             <p class='titulo'>CICLOS</p>
             <a href="NovoCiclo.php" class='subtitulo'>Novo Ciclo</a>
+            <br>
             <br>
             <?php
             include "conexao.php";
