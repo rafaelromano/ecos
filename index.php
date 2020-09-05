@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p align="center"> 
+<center>
 <p class='titulo1'>Feira Orgânico Solidário </p>
 <table  width=95%>
     <tr>
@@ -67,6 +67,6 @@
     </tr>
 </table>
 
-</p>
+</center>
 </body>
 </html>
