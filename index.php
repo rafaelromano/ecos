@@ -16,11 +16,7 @@
         <td bgcolor="#E6E6E6">
             <br>
             <p class='p.titulo'>CICLOS</p>
-            <br>
-            <br>
-            <a href="NovoCiclo.php"><p class='p.subtitulo'>Novo Ciclo</p></a>
-            <br>
-            <br>
+            <p class='p.subtitulo'><a href="NovoCiclo.php">Novo Ciclo</a></p>
             <?php
             include "conexao.php";
             $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1; 
