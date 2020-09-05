@@ -55,13 +55,13 @@
                 <?php
                 if($pagina > 1) {
                     //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' tyle=\'width:150;height:20\' value='EXIBIR CICLOS ANTERIORES' class='button1'></a>"; 
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' tyle=\'width:150;height:20\' value='CICLOS ANTERIORES' class='button1'></a>"; 
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {
                     $ativo = ($i == $pagina) ? 'numativo' : '';
                     //echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
-                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' tyle=\'width:50;height:20\' value='".$i."'' class='button2'></a>";
+                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' tyle=\'width:50;height:20\' value='".$i."' class='button2'></a>";
                 }
     
                 if($pagina < $numPaginas) {
