@@ -52,6 +52,7 @@
     </tr>
     <tr>
             <td>
+                <br>
                 <?php
                 if($pagina > 1) {
                     echo "<a href='index.php?pagina=".($pagina - 1)."'><button class='button1'>Ciclos Anteriores</button></a>";
@@ -63,7 +64,7 @@
                 }
     
                 if($pagina < $numPaginas) {
-                    echo "<a href='index.php?pagina=".($pagina + 1)."'><button class='button1'>Exibir Próximo Ciclos</button></a>";
+                    echo "<a href='index.php?pagina=".($pagina + 1)."'>&nbsp;&nbsp;<button class='button1'>Exibir Próximos Ciclos</button></a>";
                 }
                 mysqli_close($conn);
                 ?>
