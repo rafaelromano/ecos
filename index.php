@@ -54,8 +54,8 @@
             <td>
                 <?php
                 if($pagina > 1) {
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
-                    //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' value='CICLOS ANTERIORES' class='button1'></a>"; 
+                    //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><button class='button1'>CICLOS ANTERIORES</button1></a>"; 
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {
