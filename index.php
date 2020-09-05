@@ -13,6 +13,7 @@
 <table  width=95%>
     <tr>
         <td bgcolor="#E6E6E6">
+            <font size="6px" face="Verdana" color="#0489B1">CICLOS</font>
             <br>
             <br>
             <a href="NovoCiclo.php"><font size="4px" face="Verdana" color="#0489B1">  Novo Ciclo</font></a>
@@ -45,8 +46,6 @@
                 echo "<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."<br><br>";
             } 
             ?>
-            <br>
-            <br>   
         </td>
     </tr>
     <tr>
