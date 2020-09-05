@@ -22,11 +22,14 @@
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
                 echo "<b>Ciclo:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Codigo"].">";
-                
+
                 echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a>";
                 echo "<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"];
                 echo "<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."<br><br>";
-                Data inicial do Ciclo										(atualizar Data-início-geral)
+               
+            } 
+            ?>
+             Data inicial do Ciclo										(atualizar Data-início-geral)
 
 Horário inicial do Ciclo									(atualizar Hora-início-geral
 
@@ -63,8 +66,6 @@ Texto para exibir após Consumidores finalizar Pedido	(atualizar Texto-confirma-
 URL para a página de Administradores					(atualizar URL-administradores - iniciar com “https://os.eco.br/admin”)
 
 Situação do Ciclo											(atualizar Situação)
-            } 
-            ?>
         </td>
     </tr>
     <tr>
