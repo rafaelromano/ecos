@@ -11,7 +11,6 @@
 <table  width=95%>
     <tr>
         <td bgcolor="#E6E6E6">
-            <br>
             <p class='titulo'>CICLOS</p>
             <a href="NovoCiclo.php" class='subtitulo'>Novo Ciclo</a>
             <br>
@@ -40,9 +39,10 @@
                 <?php
                 echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a></p>";
                 echo "<p class='texto'<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
-                echo "<p class='texto'<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p>";
+                echo "<p class='texto'<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br>";
             } 
             ?>
+            <br>
         </td>
     </tr>
     <tr>
