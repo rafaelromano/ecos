@@ -43,9 +43,9 @@
                 ?>
                 <a href="NovoCiclo.php?codigo<?php echo $exibe_ciclos["Codigo"]; ?>">
                 <?php
-                echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a>";
-                echo "<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"];
-                echo "<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br><br>";
+                echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a></p>";
+                echo "<p class='p.texto'<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"."</p>"];
+                echo "<p class='p.texto'<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br><br>";
             } 
             ?>
         </td>
