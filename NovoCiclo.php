@@ -15,7 +15,7 @@
     <tr>
         <td bgcolor="#E6E6E6">
             <br>
-            <font size="6px" face="Verdana" color="#0489B1">NOVO CICLO</font>
+            <<p class='p.titulo'>NOVO CICLO</p>
             <?php
             include "conexao.php";
             

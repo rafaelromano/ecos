@@ -15,10 +15,10 @@
     <tr>
         <td bgcolor="#E6E6E6">
             <br>
-            <font size="6px" face="Verdana" color="#0489B1">CICLOS</font>
+            <p class='p.titulo'>CICLOS</p>
             <br>
             <br>
-            <a href="NovoCiclo.php"><font size="4px" face="Verdana" color="#0489B1">  Novo Ciclo</font></a>
+            <a href="NovoCiclo.php"><p class='p.subtitulo'>Novo Ciclo</p></a>
             <br>
             <br>
             <?php
@@ -44,8 +44,8 @@
                 <a href="NovoCiclo.php?codigo<?php echo $exibe_ciclos["Codigo"]; ?>">
                 <?php
                 echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a></p>";
-                echo "<p class='p.texto'<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"."</p>"];
-                echo "<p class='p.texto'<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br><br>";
+                echo "<p class='p.texto'<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
+                echo "<p class='p.texto'<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p>";
             } 
             ?>
         </td>
@@ -55,16 +55,16 @@
                 <br>
                 <?php
                 if($pagina > 1) {
-                    echo "<a href='index.php?pagina=".($pagina - 1)."'><button class='button1'>Ciclos Anteriores</button></a>";
+                    echo "<a href='index.php?pagina=".($pagina - 1)."'><button class='button3'>Ciclos Anteriores</button></a>";
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {
                     $ativo = ($i == $pagina) ? 'numativo' : '';
-                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' value='".$i."' class='button2'></a>";
+                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' value='".$i."' class='button3'></a>";
                 }
     
                 if($pagina < $numPaginas) {
-                    echo "&nbsp;&nbsp;<a href='index.php?pagina=".($pagina + 1)."'><button class='button1'>Exibir Próximos Ciclos</button></a>";
+                    echo "&nbsp;&nbsp;<a href='index.php?pagina=".($pagina + 1)."'><button class='button3'>Exibir Próximos Ciclos</button></a>";
                 }
                 mysqli_close($conn);
                 ?>
