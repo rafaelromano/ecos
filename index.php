@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Ciclos</title>
 </head>
 <body>
@@ -54,18 +55,18 @@
                 <?php
                 if($pagina > 1) {
                     //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' tyle=\'width:150;height:20\' value='EXIBIR CICLOS ANTERIORES'></a>"; 
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' tyle=\'width:150;height:20\' value='EXIBIR CICLOS ANTERIORES' class='button1></a>"; 
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {
                     $ativo = ($i == $pagina) ? 'numativo' : '';
                     //echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
-                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' tyle=\'width:50;height:20\' value='".$i."'></a>";
+                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' tyle=\'width:50;height:20\' value='".$i."''></a>";
                 }
     
                 if($pagina < $numPaginas) {
                     //echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' tyle=\'width:150;height:20\' value='EXIBIR PRÓXIMOS CICLOS'></a>";
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' value='EXIBIR PRÓXIMOS CICLOS' class='button1></a>";
                 }
     
                 mysqli_close($conn);
