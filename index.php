@@ -66,7 +66,7 @@
     
                 if($pagina < $numPaginas) {
                     //echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='#' value='EXIBIR PRÓXIMOS CICLOS' class='button1'></a>";
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><button class='button1'>EXIBIR PRÓXIMOS CICLOS</button1></a>";
                 }
                 mysqli_close($conn);
                 ?>
