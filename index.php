@@ -20,26 +20,43 @@
             <br>
             <?php
             include "conexao.php";
-            $sql = "SELECT * FROM `Ciclos`";
-            $result = mysqli_query($conn,$sql); 
-            if (!$result) {
-                echo "Erro do banco de dados, não foi possível consultar o banco de dados\n";
-                echo 'Erro MySQL: ' . mysqli_error();
-                exit;
+            $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1; 
+
+            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1'"); 
+
+            $total = mysqli_num_rows($banco); 
+
+            $registros = 5;
+
+            $numPaginas = ceil($total/$registros);
+
+            $inicio = ($registros*$pagina)-$registros; 
+
+            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' LIMIT $inicio,$registros"); 
+            $total = mysqli_num_rows($banco); 
+
+            while($exibe_ciclos = mysqli_fetch_array($banco)) { 
+                echo "<b>Ciclo:"; 
+                ?>
+                <a href="NovoCiclo.php?codigo<?php echo $exibe_ciclos["Codigo"]; ?>">
+                <?php
+                echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a>";
+                echo "<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"];
+                echo "<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."<br><br>";
+            } 
+            if($pagina > 1) {
+                echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
             }
-            if (mysqli_num_rows($result) > 0) {
-                        while($row = mysqli_fetch_assoc($result)) {
-                        echo "<b>Ciclo:"; 
-                        ?>
-                        <a href="NovoCiclo.php?codigo<?php echo $row["Codigo"]; ?>">
-                        <?php
-                        echo "</b>" . $row["Titulo-ciclo-aberto"]."</a>";
-                        echo "<b> - Data Inicial:</b> ".$row["Data-inicio-geral"];
-                        echo "<b> - Data Final: </b>".$row["Data-fim-geral"]."<br><br>";
-                        }
-                    } else {
-                        echo "0 results";
-                    }
+
+            for($i = 1; $i < $numPaginas; $i++) {
+                $ativo = ($i == $pagina) ? 'numativo' : '';
+                echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
+            }
+
+            if($pagina < $numPaginas) {
+                echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
+            }
+
             mysqli_close($conn);
             ?>
             <br>
