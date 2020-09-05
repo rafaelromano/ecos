@@ -35,7 +35,7 @@
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
                 echo "<p class='texto'><b>Ciclo:"; 
                 ?>
-                <a href="NovoCiclo.php?codigo<?php echo $exibe_ciclos["Codigo"]; ?>">
+                <a href="NovoCiclo.php?codigo=<?php echo $exibe_ciclos["Codigo"]; ?>">
                 <?php
                 echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a></p>";
                 echo "<p class='texto'<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
