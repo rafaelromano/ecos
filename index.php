@@ -64,7 +64,7 @@
                 }
     
                 if($pagina < $numPaginas) {
-                    echo "<a href='index.php?pagina=".($pagina + 1)."'>&nbsp;&nbsp;<button class='button1'>Exibir Próximos Ciclos</button></a>";
+                    echo "&nbsp;&nbsp;<a href='index.php?pagina=".($pagina + 1)."'><button class='button1'>Exibir Próximos Ciclos</button></a>";
                 }
                 mysqli_close($conn);
                 ?>
