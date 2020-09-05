@@ -36,6 +36,7 @@
 .titulo1 {
     font-family: "Times New Roman", Times, serif;
     color: #0489B1;
+    align-items: center;
     font-size: 50px;
 }
 .titulo {

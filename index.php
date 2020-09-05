@@ -8,9 +8,6 @@
 
 <p align="center"> 
 <p class='titulo1'>Feira Orgânico Solidário </p>
-<br>
-<br>
-<br>
 <table  width=95%>
     <tr>
         <td bgcolor="#E6E6E6">
