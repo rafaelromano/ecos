@@ -39,13 +39,13 @@
             $total = mysqli_num_rows($banco); 
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
-                echo "<b>Ciclo:"; 
+                echo "<p class='p.texto'><b>Ciclo:"; 
                 ?>
                 <a href="NovoCiclo.php?codigo<?php echo $exibe_ciclos["Codigo"]; ?>">
                 <?php
                 echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a>";
                 echo "<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"];
-                echo "<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."<br><br>";
+                echo "<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br><br>";
             } 
             ?>
         </td>
