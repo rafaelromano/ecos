@@ -16,3 +16,13 @@
     display: inline-block;
     font-size: 14px;
 }
+.button3 {
+    background-color: #0489B1;
+    color: white;
+    {width: 15%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+}

@@ -39,8 +39,8 @@
             <td>
                 <br>
                 <?php
-                echo "<a href='index.php'><button class='button1'>CANCELAR</button></a>";
-                echo "&nbsp;&nbsp;&nbsp;<a href='AtualizarCiclo.php'><button class='button1'>ATUALIZAR</button></a>";
+                echo "<a href='index.php'><button class='button3'>CANCELAR</button></a>";
+                echo "&nbsp;&nbsp;&nbsp;<a href='AtualizarCiclo.php'><button class='button3'>ATUALIZAR</button></a>";
                 mysqli_close($conn);
                 ?>
             </td>
