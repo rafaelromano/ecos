@@ -15,8 +15,8 @@
     <tr>
         <td bgcolor="#E6E6E6">
             <br>
-            <p class='p.titulo'>CICLOS</p>
-            <p class='p.subtitulo'><a href="NovoCiclo.php">Novo Ciclo</a></p>
+            <p class='titulo'>CICLOS</p>
+            <p class='subtitulo'><a href="NovoCiclo.php">Novo Ciclo</a></p>
             <?php
             include "conexao.php";
             $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1; 
@@ -35,13 +35,13 @@
             $total = mysqli_num_rows($banco); 
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
-                echo "<p class='p.texto'><b>Ciclo:"; 
+                echo "<p class='texto'><b>Ciclo:"; 
                 ?>
                 <a href="NovoCiclo.php?codigo<?php echo $exibe_ciclos["Codigo"]; ?>">
                 <?php
                 echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a></p>";
-                echo "<p class='p.texto'<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
-                echo "<p class='p.texto'<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p>";
+                echo "<p class='texto'<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
+                echo "<p class='texto'<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p>";
             } 
             ?>
         </td>
@@ -51,7 +51,7 @@
                 <br>
                 <?php
                 if($pagina > 1) {
-                    echo "<a href='index.php?pagina=".($pagina - 1)."'><button class='button3'>Ciclos Anteriores</button></a>";
+                    echo "<a href='index.php?pagina=".($pagina - 1)."'><button class='button3'>Ciclos Anteriores</button></a>&nbsp;&nbsp;";
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {

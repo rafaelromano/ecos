@@ -28,18 +28,18 @@
     font-size: 14px;
     border-radius: 4px;
 }
-.p.texto {
+.texto {
     font-family: "Times New Roman", Times, serif;
     font-size: 14px;
 }
 
-.p.titulo {
+.titulo {
     font-family: "Times New Roman", Times, serif;
     color: #0489B1;
     font-size: 40px;
 }
 
-.p.subtitulo {
+.subtitulo {
     font-family: "Times New Roman", Times, serif;
     color: #0489B1;
     font-size: 30px;
