@@ -29,17 +29,17 @@
     font-size: 14px;
     border-radius: 4px;
 }
-p.texto {
+.p.texto {
     font-family: "Times New Roman", Times, serif;
     font-size: 14px;
 }
 
-p.titulo {
+.p.titulo {
     color: #0489B1;
     font-size: 40px;
 }
 
-p.subtitulo {
+.p.subtitulo {
     color: #0489B1;
     font-size: 30px;
 }
