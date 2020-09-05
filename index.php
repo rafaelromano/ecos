@@ -13,6 +13,7 @@
 <table  width=95%>
     <tr>
         <td bgcolor="#E6E6E6">
+            <br>
             <font size="6px" face="Verdana" color="#0489B1">CICLOS</font>
             <br>
             <br>
@@ -52,7 +53,8 @@
             <td>
                 <?php
                 if($pagina > 1) {
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
+                    //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' tyle=\'width:90;height:10\' value='Anterior'></a>"; 
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {
