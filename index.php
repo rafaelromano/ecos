@@ -60,8 +60,8 @@
     
                 for($i = 1; $i < $numPaginas; $i++) {
                     $ativo = ($i == $pagina) ? 'numativo' : '';
-                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
-                    //echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' value='".$i."' class='button2'></a>";
+                    //echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
+                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' value='".$i."' class='button2'></a>";
                 }
     
                 if($pagina < $numPaginas) {
