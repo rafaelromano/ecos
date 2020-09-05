@@ -30,10 +30,10 @@
             }
             $inicio = $pc - 1;
             $inicio = $inicio * $total_reg;
-            $limite = mysql_query("$busca LIMIT $inicio,$total_reg");
-            $todos = mysql_query("$busca");
+            $limite = mysqli_query("$busca LIMIT $inicio,$total_reg");
+            $todos = mysqli_query("$busca");
 
-            $tr = mysql_num_rows($todos); // verifica o número total de registros
+            $tr = mysqli_num_rows($todos); // verifica o número total de registros
             $tp = $tr / $total_reg; // verifica o número total de páginas
 
             // vamos criar a visualização
