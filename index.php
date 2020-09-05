@@ -44,24 +44,30 @@
                 echo "<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"];
                 echo "<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."<br><br>";
             } 
-            if($pagina > 1) {
-                echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
-            }
-
-            for($i = 1; $i < $numPaginas; $i++) {
-                $ativo = ($i == $pagina) ? 'numativo' : '';
-                echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
-            }
-
-            if($pagina < $numPaginas) {
-                echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
-            }
-
-            mysqli_close($conn);
             ?>
             <br>
             <br>   
         </td>
+    </tr>
+    <tr>
+            <td>
+                <?php
+                if($pagina > 1) {
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
+                }
+    
+                for($i = 1; $i < $numPaginas; $i++) {
+                    $ativo = ($i == $pagina) ? 'numativo' : '';
+                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
+                }
+    
+                if($pagina < $numPaginas) {
+                    echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
+                }
+    
+                mysqli_close($conn);
+                ?>
+            </td>
     </tr>
 </table>
 
