@@ -6,16 +6,12 @@
 </head>
 <body>
 
-<p align="center"> 
-    <font size="20px" face="Verdana" color="#0489B1">  Feira Orgânico Solidário </font>
-<br>
-<br>
-<br>
+<center>
+<p class='titulo1'>Feira Orgânico Solidário </p>
 <table  width=95%>
     <tr>
         <td bgcolor="#E6E6E6">
-            <br>
-            <<p class='p.titulo'>NOVO CICLO</p>
+            <p class='titulo'>NOVO CICLO</p>
             <?php
             include "conexao.php";
             
@@ -47,6 +43,6 @@
     </tr>
 </table>
 
-</p>
+</center>
 </body>
 </html>
