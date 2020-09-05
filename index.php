@@ -54,7 +54,8 @@
             <td>
                 <?php
                 if($pagina > 1) {
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
+                    //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
+                    echo "<a href='index.php?pagina=".($pagina + 1)."'><button>anterior</button> &raquo;</a>";
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {
@@ -64,7 +65,8 @@
                 }
     
                 if($pagina < $numPaginas) {
-                    echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
+                    //echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
+                    echo "<a href='index.php?pagina=".($pagina + 1)."'><button>proximo</button> &raquo;</a>";
                 }
                 mysqli_close($conn);
                 ?>
