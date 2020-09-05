@@ -13,6 +13,7 @@
         <td bgcolor="#E6E6E6">
             <p class='titulo'>NOVO CICLO</p>
             <?php
+            echo $codigo;
             include "conexao.php";
             
             $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Codigo='".$codigo."'"); 
