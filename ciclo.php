@@ -21,54 +21,41 @@
             <?php
             include "conexao.php";
 
-            // Informações da query
-            $campos_query = "*";
-            $final_query  = "FROM Ciclos ORDER BY cod ASC";
-            // Maximo de registros por pagina
-            $maximo = 5;
-            // Declaração da pagina inicial
-            $pagina = $_GET["pagina"];
-            if($pagina == "") {
-                $pagina = "1";
+            $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1; 
+
+            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1'"); 
+
+            $total = mysqli_num_rows($banco); 
+
+            $registros = 5;
+
+            $numPaginas = ceil($total/$registros);
+
+            $inicio = ($registros*$pagina)-$registros; 
+
+            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' LIMIT $inicio,$registros"); 
+            $total = mysqli_num_rows($banco); 
+
+            while($exibe_ciclos = mysqli_fetch_array($banco)) { 
+        ?>
+        <div class="conteudo_p">
+            <div class="Ciclo"><?php echo $exibe_ciclos['Titulo-ciclo-aberto']; ?></div>
+            <div class="Data_Inicial"><?php echo $exibe_ciclos['Data-inicio-geral']; ?></div>
+            <div class="Data-fim-geral"><?php echo $exibe_ciclos['Data-fim-geral']; ?></div>
+        </div>
+        <?php } ?>
+        <?php
+            if($pagina > 1) {
+                echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
             }
-            // Calculando o registro inicial
-            $inicio = $pagina - 1;
-            $inicio = $maximo * $inicio;
-            // Conta os resultados no total da query
-            $strCount = "SELECT COUNT(*) AS 'num_registros' $final_query";
-            $query = mysqli_query($strCount);
-            $row = mysqli_fetch_array($query);
-            $total = $row["num_registros"];
-            ###################################################################################
-            // INICIO DO CONTEÚDO
-            // Realizamos a query
-            $sql = mysqli_query("SELECT $campos_query $final_query LIMIT $inicio,$maximo");
-            // Exibimos os nomes dos produtos e seus repectivos valores
-            while ($linha = mysqli_fetch_object($sql)) {
-                echo "<b>" . $linha->nome . "</b> (R$ ". $linha->valor.")<br />";
+
+            for($i = 1; $i < $numPaginas; $i++) {
+                $ativo = ($i == $pagina) ? 'numativo' : '';
+                echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
             }
-            // FIM DO CONTEUDO
-            ###################################################################################
-            $menos = $pagina - 1;
-            $mais = $pagina + 1;
-            $pgs = ceil($total / $maximo);
-            if($pgs > 1 ) {
-                echo "<br />";
-                // Mostragem de pagina
-                if($menos > 0) {
-                    echo "<a href=".$_SERVER['PHP_SELF']."?pagina=$menos>anterior</a>  ";
-                }
-                // Listando as paginas
-                for($i=1;$i <= $pgs;$i++) {
-                    if($i != $pagina) {
-                        echo " <a href=".$_SERVER['PHP_SELF']."?pagina=".($i).">$i</a> | ";
-                    } else {
-                        echo " <strong>".$i."</strong> | ";
-                    }
-                }
-                if($mais <= $pgs) {
-                    echo " <a href=".$_SERVER['PHP_SELF']."?pagina=$mais>próxima</a>";
-                }
+
+            if($pagina < $numPaginas) {
+                echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
             }
 
             mysqli_close($conn);
