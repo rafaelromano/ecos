@@ -14,9 +14,10 @@
             <p class='titulo'>NOVO CICLO</p>
             <?php
             $CODIGO = $_POST['codigo'];
+            echo $CODIGO;
             include "conexao.php";
             
-            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Codigo='".$codigo."'"); 
+            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Codigo='".$CODIGO."'"); 
 
             $total = mysqli_num_rows($banco); 
 
