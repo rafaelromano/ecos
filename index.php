@@ -54,19 +54,19 @@
             <td>
                 <?php
                 if($pagina > 1) {
-                    //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' value='CICLOS ANTERIORES' class='button1'></a>"; 
+                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'>&laquo; anterior</a>";
+                    //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' value='CICLOS ANTERIORES' class='button1'></a>"; 
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {
                     $ativo = ($i == $pagina) ? 'numativo' : '';
-                    //echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
-                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' value='".$i."' class='button2'></a>";
+                    echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'> ".$i." </a>";
+                    //echo "<a href='index.php?pagina=".$i."' class='numero ".$ativo."'><input type='Button' value='".$i."' class='button2'></a>";
                 }
     
                 if($pagina < $numPaginas) {
-                    //echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
-                    echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' value='EXIBIR PRÓXIMOS CICLOS' class='button1'></a>";
+                    echo "<a href='index.php?pagina=".($pagina + 1)."' class='controle'>proximo &raquo;</a>";
+                    //echo "<a href='index.php?pagina=".($pagina - 1)."' class='controle'><input type='Button' value='EXIBIR PRÓXIMOS CICLOS' class='button1'></a>";
                 }
                 mysqli_close($conn);
                 ?>
