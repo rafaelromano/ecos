@@ -13,7 +13,7 @@
         <td bgcolor="#E6E6E6">
             <p class='titulo'>NOVO CICLO</p>
             <?php
-            $CODIGO = $_GET['codigo'];
+            $CODIGO = $_GET['codigo']."valor";
             echo $CODIGO;
             include "conexao.php";
             
