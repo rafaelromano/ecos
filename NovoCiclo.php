@@ -22,7 +22,7 @@
             $total = mysqli_num_rows($banco); 
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
-                echo $exibe_ciclos;
+                echo $exibe_ciclos["Codigo"];
                 echo "<b>Ciclo:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Codigo"].">";
 
                 //echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a>";
