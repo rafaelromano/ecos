@@ -13,7 +13,7 @@
             <p class='titulo'>CADASTRO ATUALIZADO</p>
             <?php
             $CODIGO = $_POST['codigo'];
-           // $data-inicio-geral = $_POST['data-inicio-geral'];
+            $datainiciogeral = $_POST['data-inicio-geral'];
 //            $hora-inicio-geral = $_POST['hora-inicio-geral'];
 //            $data-fim-geral = $_POST['data-fim-geral'];
 //            $hora-fim-geral = $_POST['hora-fim-geral'];
