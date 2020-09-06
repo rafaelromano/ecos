@@ -41,7 +41,7 @@
             Data-fim-consumidores='$data-fim-consumidores', Titulo-ciclo-aberto='$titulo-ciclo-aberto', Texto-complementar-título='$texto-complementar-título',
             Texto-dicas='$texto-dicas', Texto-ciclo-fechado='$texto-ciclo-fechado', URL-produtores='$url-produtores', Texto-confirma-ofertas='$texto-confirma-ofertas',
             Texto-confirma-pedido-produtores='$texto-confirma-pedido-produtores', URL-consumidores='$url-consumidores', Texto-confirma-pedido-consumidores='$texto-confirma-pedido-consumidores',
-            URL-administradores='$url-administradores', Situacao='$situacao' WHERE codigo='$CODIGO"); 
+            URL-administradores='$url-administradores', Situacao='$situacao' WHERE codigo='$CODIGO'"); 
 
             } 
             ?>
