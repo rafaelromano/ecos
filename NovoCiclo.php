@@ -5,7 +5,7 @@
         <title>Ciclos</title>
 </head>
 <body>
-
+<input type='text' class='formulario' size='10'
 <center>
 <p class='titulo1'>Feira Orgânico Solidário </p>
 <table  width=95%>
@@ -23,25 +23,25 @@
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
                 echo "<b>Código:</b>".$exibe_ciclos["Codigo"]."<br>";
-                echo "<b>Data inicial do Ciclo:</b><br><input type='text' class='formulario' size='10' maxsize='10' name='codigo' value='".$exibe_ciclos["Data-inicio-geral"]."'><br>";
-                echo "<b>Horário inicial do Ciclo:</b><input type='text' size='5' maxsize='5' name='codigo' value='".$exibe_ciclos["Hora-inicio-geral"]."'><br>";
-                echo "<b>Data final	do Ciclo:</b><input type='text' size='10' maxsize='10' name='codigo' value='".$exibe_ciclos["Data-fim-geral"]."'><br>";
-                echo "<b>Horário de encerramento do Ciclo:</b><input type='text' size='5' maxsize='5' name='codigo' value='".$exibe_ciclos["Hora-fim-geral"]."'><br>";
-                echo "<b>Data inicial para Produtores ofertarem produtos:</b><input type='text' size='10' maxsize='10' name='codigo' value='".$exibe_ciclos["Data-inicio-produtores"]."'><br>";
-                echo "<b>Data final para Produtores ofertarem produtos:</b><input type='text' size='10' maxsize='10' name='codigo' value='".$exibe_ciclos["Data-fim-produtores"]."'><br>";
-                echo "<b>Data inicial para Consumidores realizarem pedido:</b><input type='text' size='10' maxsize='10' name='codigo' value='".$exibe_ciclos["Data-inicio-consumidores"]."'><br>";
-                echo "<b>Data final para Consumidores realizarem pedido:</b><input type='text' size='10' maxsize='10' name='codigo' value='".$exibe_ciclos["Data-fim-consumidores"]."'><br>";
-                echo "<b>Título para Ciclo aberto:</b><input type='text' size='40' maxsize='200' name='codigo' value='".$exibe_ciclos["Titulo-ciclo-aberto"]."'><br>";
-                echo "<b>Texto para Ciclo aberto:</b><input type='text' size='40' maxsize='200' value='".$exibe_ciclos["Texto-complementar-título"]."'><br>";
-                echo "<b>Texto com as Dicas para o Ciclo aberto:</b><input type='text' size='40' maxsize='200' name='codigo' value='".$exibe_ciclos["Texto-dicas"]."'><br>";
-                echo "<b>Texto para quando o Ciclo estiver fechado:</b><input type='text' size='40' maxsize='200' name='codigo' value='".$exibe_ciclos["Texto-ciclo-fechado"]."'><br>";
-                echo "<b>URL para a página de Produtores 	:</b><input type='text' size='40' maxsize='200' name='codigo' value='".$exibe_ciclos["URL-produtores"]."'><br>";
-                echo "<b>Texto para exibir após Produtor finalizar Ofertas:</b><input type='text' size='40' maxsize='200' name='codigo' value='".$exibe_ciclos["Texto-confirma-ofertas"]."'><br>";
-                echo "<b>Texto para exibir após Produtores finalizar Pedido:</b><input type='text' size='40' maxsize='200' name='codigo' value='".$exibe_ciclos["Texto-confirma-pedido-produtores"]."'><br>";
-                echo "<b>URL para a página de Consumidores :</b><input type='text' size='40' maxsize='200' name='codigo' value='".$exibe_ciclos["URL-consumidores"]."'><br>";
-                echo "<b>Texto para exibir após Consumidores finalizar Pedido:</b><input type='text' size='40' maxsize='200' name='codigo' value='".$exibe_ciclos["Texto-confirma-pedido-consumidores"]."'><br>";
-                echo "<b>URL para a página de Administradores:</b><input type='text' size='40' maxsize='200' name='codigo' value='".$exibe_ciclos["URL-administradores"]."'><br>";
-                echo "<b>Situação:</b><input type='radio' name='situacao' value='".$exibe_ciclos["Situacao"]."'>Aberto - <input type='radio' name='situacao' value='".$exibe_ciclos["Situacao"]."'>Fechado<br><br>";
+                echo "<b>Data inicial do Ciclo:</b><br><input type='text' size='10' maxlength='10' name='codigo' value='".$exibe_ciclos["Data-inicio-geral"]."'><br>";
+                echo "<b>Horário inicial do Ciclo:</b><br><input type='text' size='5'  maxlength='5' name='codigo' value='".$exibe_ciclos["Hora-inicio-geral"]."'><br>";
+                echo "<b>Data final	do Ciclo:</b><br><input type='text' size='10'  maxlength='10' name='codigo' value='".$exibe_ciclos["Data-fim-geral"]."'><br>";
+                echo "<b>Horário de encerramento do Ciclo:</b><br><input type='text' size='5'  maxlength='5' name='codigo' value='".$exibe_ciclos["Hora-fim-geral"]."'><br>";
+                echo "<b>Data inicial para Produtores ofertarem produtos:</b><br><input type='text' size='10'  maxlength='10' name='codigo' value='".$exibe_ciclos["Data-inicio-produtores"]."'><br>";
+                echo "<b>Data final para Produtores ofertarem produtos:</b><br><input type='text' size='10'  maxlength='10' name='codigo' value='".$exibe_ciclos["Data-fim-produtores"]."'><br>";
+                echo "<b>Data inicial para Consumidores realizarem pedido:</b><br><input type='text' size='10'  maxlength='10' name='codigo' value='".$exibe_ciclos["Data-inicio-consumidores"]."'><br>";
+                echo "<b>Data final para Consumidores realizarem pedido:</b><br><input type='text' size='10'  maxlength='10' name='codigo' value='".$exibe_ciclos["Data-fim-consumidores"]."'><br>";
+                echo "<b>Título para Ciclo aberto:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["Titulo-ciclo-aberto"]."'><br>";
+                echo "<b>Texto para Ciclo aberto:</b><br><input type='text' size='40'  maxlength='200' value='".$exibe_ciclos["Texto-complementar-título"]."'><br>";
+                echo "<b>Texto com as Dicas para o Ciclo aberto:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["Texto-dicas"]."'><br>";
+                echo "<b>Texto para quando o Ciclo estiver fechado:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["Texto-ciclo-fechado"]."'><br>";
+                echo "<b>URL para a página de Produtores:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["URL-produtores"]."'><br>";
+                echo "<b>Texto para exibir após Produtor finalizar Ofertas:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["Texto-confirma-ofertas"]."'><br>";
+                echo "<b>Texto para exibir após Produtores finalizar Pedido:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["Texto-confirma-pedido-produtores"]."'><br>";
+                echo "<b>URL para a página de Consumidores:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["URL-consumidores"]."'><br>";
+                echo "<b>Texto para exibir após Consumidores finalizar Pedido:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["Texto-confirma-pedido-consumidores"]."'><br>";
+                echo "<b>URL para a página de Administradores:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["URL-administradores"]."'><br>";
+                echo "<b>Situação:</b><br><input type='radio' name='situacao' value='".$exibe_ciclos["Situacao"]."'>Aberto - <input type='radio' name='situacao' value='".$exibe_ciclos["Situacao"]."'>Fechado<br><br>";
             } 
             ?>
         </td>
