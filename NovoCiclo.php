@@ -49,7 +49,7 @@
                     $selecao2="checked";
                     }
                 
-                echo "<b>Situação:</b><br><input type='radio' name='situacao' value='1' ".echo $selecao1;.">Aberto - <input type='radio' name='situacao' value='0' ".echo $selecao2;.">Fechado<br><br>";
+                echo "<b>Situação:</b><br><input type='radio' name='situacao' value='1' ".$selecao1;.">Aberto - <input type='radio' name='situacao' value='0' ".$selecao2;.">Fechado<br><br>";
                 
             } 
             ?>
