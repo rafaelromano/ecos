@@ -23,7 +23,7 @@
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
                 echo "<b>Código:</b>".$exibe_ciclos["Codigo"]."<br>";
-                echo "<b>Data inicial do Ciclo:</b><input type='text' size='10' maxsize='10' name='codigo' value='".$exibe_ciclos["Data-inicio-geral"]."'><br>";
+                echo "<b>Data inicial do Ciclo:</b><br><input type='text' class='formulario' size='10' maxsize='10' name='codigo' value='".$exibe_ciclos["Data-inicio-geral"]."'><br>";
                 echo "<b>Horário inicial do Ciclo:</b><input type='text' size='5' maxsize='5' name='codigo' value='".$exibe_ciclos["Hora-inicio-geral"]."'><br>";
                 echo "<b>Data final	do Ciclo:</b><input type='text' size='10' maxsize='10' name='codigo' value='".$exibe_ciclos["Data-fim-geral"]."'><br>";
                 echo "<b>Horário de encerramento do Ciclo:</b><input type='text' size='5' maxsize='5' name='codigo' value='".$exibe_ciclos["Hora-fim-geral"]."'><br>";

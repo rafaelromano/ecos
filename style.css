@@ -60,6 +60,11 @@
     padding: 10px;
 }
 
+.formulario{
+    width: 400px;
+    padding: 30px;
+    border:1px solid #ccc;
+}
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="titulo1"] {
