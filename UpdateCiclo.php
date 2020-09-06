@@ -14,6 +14,7 @@
             <?php
             $CODIGO = $_POST['codigo'];
             $datainiciogeral = $_POST['data-inicio-geral'];
+            echo $datainiciogeral;
 //            $hora-inicio-geral = $_POST['hora-inicio-geral'];
 //            $data-fim-geral = $_POST['data-fim-geral'];
 //            $hora-fim-geral = $_POST['hora-fim-geral'];
