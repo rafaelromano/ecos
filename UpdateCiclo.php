@@ -36,19 +36,12 @@
             include "conexao.php";
             
             //$banco = mysqli_query($conn, "UPDATE Ciclos SET Data-inicio-geral='$data-inicio-geral', Hora-inicio-gera='$hora-inicio-geral', Data-fim-geral='$data-fim-geral', Hora-fim-geral='$hora-fim-geral', Data-inicio-produtores='$data-inicio-produtores', Data-fim-produtores='$data-fim-produtores', Data-inicio-consumidores='$data-inicio-consumidores', Data-fim-consumidores='$data-fim-consumidores', Titulo-ciclo-aberto='$titulo-ciclo-aberto', Texto-complementar-título='$texto-complementar-título', Texto-dicas='$texto-dicas', Texto-ciclo-fechado='$texto-ciclo-fechado', URL-produtores='$url-produtores', Texto-confirma-ofertas='$texto-confirma-ofertas', Texto-confirma-pedido-produtores='$texto-confirma-pedido-produtores', URL-consumidores='$url-consumidores', Texto-confirma-pedido-consumidores='$texto-confirma-pedido-consumidores', URL-administradores='$url-administradores', Situacao='$situacao' WHERE codigo='$CODIGO'"); 
-
+            mysqli_close($conn);
             } 
             ?>
         </td>
     </tr>
-    <tr>
-            <td>
-                <br>
-                <?php
-                mysqli_close($conn);
-                ?>
-            </td>
-    </tr>
+    
 </table>
 
 </center>
