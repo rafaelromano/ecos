@@ -65,7 +65,9 @@
             'URL-consumidores'='$urlconsumidores', 'Texto-confirma-pedido-consumidores'='$textoconfirmapedidoconsumidores',
             'URL-administradores'='$urladministradores', 'Situacao'='$situacao' WHERE 'Ciclos'.'Codigo'='1'");*/
             
-            mysqli_query($conn,"UPDATE Ciclos SET Ciclos.Data-inicio-geral='$datainiciogeral', Ciclos.Hora-inicio-geral='$horainiciogeral',
+            mysqli_query($conn,"UPDATE Ciclos SET Ciclos.Hora-inicio-geral='$horainiciogeral' WHERE Ciclos.Codigo='1'");
+            
+            /*Ciclos.Data-inicio-geral='$datainiciogeral', Ciclos.Hora-inicio-geral='$horainiciogeral',
             Ciclos.Data-fim-geral='$datafimgeral', Ciclos.Hora-fim-geral='$horafimgeral', Ciclos.Data-inicio-produtores='$datainicioprodutores',
             Ciclos.Data-fim-produtores='$datafimprodutores', Ciclos.Data-inicio-consumidores='$datainicioconsumidores', 
             Ciclos.Data-fim-consumidores='$datafimconsumidores', Ciclos.Titulo-ciclo-aberto='$titulocicloaberto',
@@ -74,7 +76,7 @@
             Ciclos.Texto-confirma-ofertas='$textoconfirmaofertas', Ciclos.Texto-confirma-pedido-produtores='$textoconfirmapedidoprodutores',
             Ciclos.URL-consumidores='$urlconsumidores', Ciclos.Texto-confirma-pedido-consumidores='$textoconfirmapedidoconsumidores',
             Ciclos.URL-administradores='$urladministradores', Ciclos.Situacao='$situacao'
-             WHERE Ciclos.Codigo='1' AND Ciclos.Data-inicio-geral='08/09/2020' AND Ciclos.Hora-inicio-geral='17/09/2020'");
+             WHERE Ciclos.Codigo='1' AND Ciclos.Data-inicio-geral='08/09/2020' AND Ciclos.Hora-inicio-geral='17/09/2020'");*/
                
             
             ?>
