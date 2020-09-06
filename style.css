@@ -5,7 +5,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
 }
 .button2 {
     background-color: #0489B1;
@@ -14,7 +14,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 4px;
 }
 .button3 {
@@ -25,12 +25,12 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 4px;
 }
 .texto {
     font-family: "Times New Roman", Times, serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .titulo1 {
