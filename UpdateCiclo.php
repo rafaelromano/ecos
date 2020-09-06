@@ -63,7 +63,7 @@
             Texto-ciclo-fechado='$textociclofechado', URL-produtores='$urlprodutores',
             Texto-confirma-ofertas='$textoconfirmaofertas', Texto-confirma-pedido-produtores='$textoconfirmapedidoprodutores',
             URL-consumidores='$urlconsumidores', Texto-confirma-pedido-consumidores='$textoconfirmapedidoconsumidores',
-            URL-administradores='$urladministradores', Situacao='$situacao' WHERE codigo='$CODIGO'"); 
+            URL-administradores='$urladministradores', Situacao='$situacao' WHERE Codigo='$CODIGO'"); 
 
             mysqli_close($conn);
             ?>
