@@ -65,7 +65,7 @@
             'URL-consumidores'='$urlconsumidores', 'Texto-confirma-pedido-consumidores'='$textoconfirmapedidoconsumidores',
             'URL-administradores'='$urladministradores', 'Situacao'='$situacao' WHERE 'Ciclos'.'Codigo'='1'");*/
             
-            mysqli_query($conn,"UPDATE Ciclos SET Ciclos.Hora-inicio-geral='$horainiciogeral' WHERE Ciclos.Codigo='1'");
+            mysqli_query($conn,"UPDATE Ciclos SET Ciclos.Data-inicio-geral='$datainiciogeral' WHERE Ciclos.Codigo='1'");
             
             /*Ciclos.Data-inicio-geral='$datainiciogeral', Ciclos.Hora-inicio-geral='$horainiciogeral',
             Ciclos.Data-fim-geral='$datafimgeral', Ciclos.Hora-fim-geral='$horafimgeral', Ciclos.Data-inicio-produtores='$datainicioprodutores',
