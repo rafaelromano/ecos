@@ -73,8 +73,8 @@
             Ciclos.Texto-ciclo-fechado='$textociclofechado', Ciclos.URL-produtores='$urlprodutores',
             Ciclos.Texto-confirma-ofertas='$textoconfirmaofertas', Ciclos.Texto-confirma-pedido-produtores='$textoconfirmapedidoprodutores',
             Ciclos.URL-consumidores='$urlconsumidores', Ciclos.Texto-confirma-pedido-consumidores='$textoconfirmapedidoconsumidores',
-            Ciclos.URL-administradores='$urladministradores', Ciclos.Situacao='$situacao' WHERE Ciclos.Codigo='1'");
-            // AND Ciclos.Data-inicio-geral='08/09/2020' AND Ciclos.Hora-inicio-geral='17/09/2020'");
+            Ciclos.URL-administradores='$urladministradores', Ciclos.Situacao='$situacao'
+             WHERE Ciclos.Codigo='1' AND Ciclos.Data-inicio-geral='08/09/2020' AND Ciclos.Hora-inicio-geral='17/09/2020'");
                
             
             ?>
