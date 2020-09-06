@@ -11,6 +11,7 @@
 <table  width=95%>
     <tr>
         <td bgcolor="#E6E6E6">
+            <form method="post" action="AtualizarCiclo.php">
             <p class='titulo'>NOVO CICLO</p>
             <?php
             $CODIGO = $_GET['codigo'];
@@ -21,6 +22,7 @@
             $total = mysqli_num_rows($banco); 
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
+                echo $exibe_ciclos;
                 echo "<b>Ciclo:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Codigo"].">";
 
                 //echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a>";
@@ -73,7 +75,7 @@ Situação do Ciclo											(atualizar Situação) -->
                 <br>
                 <?php
                 echo "<a href='index.php'><button class='button3'>CANCELAR</button></a>";
-                echo "&nbsp;&nbsp;&nbsp;<a href='AtualizarCiclo.php'><button class='button3'>ATUALIZAR</button></a>";
+                echo "&nbsp;&nbsp;&nbsp;<a href='AtualizarCiclo.php'><button class='button3'>ATUALIZAR</button></a></form>";
                 mysqli_close($conn);
                 ?>
             </td>
