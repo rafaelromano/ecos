@@ -13,25 +13,25 @@
             <p class='titulo'>CADASTRO ATUALIZADO</p>
             <?php
             $CODIGO = $_POST['codigo'];
-            $data-inicio-geral = $_POST['data-inicio-geral'];
-            $hora-inicio-geral = $_POST['hora-inicio-geral'];
-            $data-fim-geral = $_POST['data-fim-geral'];
-            $hora-fim-geral = $_POST['hora-fim-geral'];
-            $data-inicio-produtores = $_POST['data-inicio-produtores'];
-            $data-fim-produtores = $_POST['data-fim-produtores'];
-            $data-inicio-consumidores = $_POST['data-inicio-consumidores'];
-            $data-fim-consumidores = $_POST['data-fim-consumidores'];
-            $titulo-ciclo-aberto = $_POST['titulo-ciclo-aberto'];
-            $texto-complementar-título = $_POST['texto-complementar-título'];
-            $texto-dicas = $_POST['texto-dicas'];
-            $texto-ciclo-fechado = $_POST['texto-ciclo-fechado'];
-            $url-produtores = $_POST['url-produtores'];
-            $texto-confirma-ofertas= $_POST['texto-confirma-ofertas'];
-            $texto-confirma-pedido-produtores = $_POST['texto-confirma-pedido-produtores'];
-            $url-consumidores = $_POST['url-consumidores'];
-            $texto-confirma-pedido-consumidores = $_POST['texto-confirma-pedido-consumidores'];
-            $url-administradores = $_POST['url-administradores'];
-            $situacao = $_POST['situacao'];
+           // $data-inicio-geral = $_POST['data-inicio-geral'];
+//            $hora-inicio-geral = $_POST['hora-inicio-geral'];
+//            $data-fim-geral = $_POST['data-fim-geral'];
+//            $hora-fim-geral = $_POST['hora-fim-geral'];
+//            $data-inicio-produtores = $_POST['data-inicio-produtores'];
+//            $data-fim-produtores = $_POST['data-fim-produtores'];
+//            $data-inicio-consumidores = $_POST['data-inicio-consumidores'];
+//            $data-fim-consumidores = $_POST['data-fim-consumidores'];
+//            $titulo-ciclo-aberto = $_POST['titulo-ciclo-aberto'];
+//            $texto-complementar-título = $_POST['texto-complementar-título'];
+//            $texto-dicas = $_POST['texto-dicas'];
+//            $texto-ciclo-fechado = $_POST['texto-ciclo-fechado'];
+//            $url-produtores = $_POST['url-produtores'];
+//            $texto-confirma-ofertas= $_POST['texto-confirma-ofertas'];
+//            $texto-confirma-pedido-produtores = $_POST['texto-confirma-pedido-produtores'];
+//            $url-consumidores = $_POST['url-consumidores'];
+//            $texto-confirma-pedido-consumidores = $_POST['texto-confirma-pedido-consumidores'];
+//            $url-administradores = $_POST['url-administradores'];
+//            $situacao = $_POST['situacao'];
            
             include "conexao.php";
             
