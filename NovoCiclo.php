@@ -26,7 +26,7 @@
                 echo "<b>Horário inicial do Ciclo:</b><br><input type='text' size='5'  maxlength='5' name='hora-inicio-geral' value='".$exibe_ciclos["Hora-inicio-geral"]."'><br>";
                 echo "<b>Data final	do Ciclo:</b><br><input type='text' size='10'  maxlength='10' name='data-fim-geral' value='".$exibe_ciclos["Data-fim-geral"]."'><br>";
                 echo "<b>Horário de encerramento do Ciclo:</b><br><input type='text' size='5'  maxlength='5' name='hora-fim-geral' value='".$exibe_ciclos["Hora-fim-geral"]."'><br>";
-                echo "<b>Data inicial para Produtores ofertarem produtos:</b><br><input type='text' size='10'  maxlength='10' name='hora-fim-geral' value='".$exibe_ciclos["Data-inicio-produtores"]."'><br>";
+                echo "<b>Data inicial para Produtores ofertarem produtos:</b><br><input type='text' size='10'  maxlength='10' name='data-inicio-produtores' value='".$exibe_ciclos["Data-inicio-produtores"]."'><br>";
                 echo "<b>Data final para Produtores ofertarem produtos:</b><br><input type='text' size='10'  maxlength='10' name='data-fim-produtores' value='".$exibe_ciclos["Data-fim-produtores"]."'><br>";
                 echo "<b>Data inicial para Consumidores realizarem pedido:</b><br><input type='text' size='10'  maxlength='10' name='data-inicio-consumidores' value='".$exibe_ciclos["Data-inicio-consumidores"]."'><br>";
                 echo "<b>Data final para Consumidores realizarem pedido:</b><br><input type='text' size='10'  maxlength='10' name='data-fim-consumidores' value='".$exibe_ciclos["Data-fim-consumidores"]."'><br>";
