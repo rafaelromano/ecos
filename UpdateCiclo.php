@@ -22,14 +22,14 @@
             $datainicioconsumidores = $_POST['data-inicio-consumidores'];
             $datafimconsumidores = $_POST['data-fim-consumidores'];
             $titulocicloaberto = $_POST['titulo-ciclo-aberto'];
-            $textocomplementar-título = $_POST['texto-complementar-título'];
+            $textocomplementartítulo = $_POST['texto-complementar-título'];
             $textodicas = $_POST['texto-dicas'];
-            $textociclo-fechado = $_POST['texto-ciclo-fechado'];
+            $textociclofechado = $_POST['texto-ciclo-fechado'];
             $urlprodutores = $_POST['url-produtores'];
-            $textoconfirma-ofertas= $_POST['texto-confirma-ofertas'];
-            $textoconfirma-pedido-produtores = $_POST['texto-confirma-pedido-produtores'];
+            $textoconfirmaofertas= $_POST['texto-confirma-ofertas'];
+            $textoconfirmapedidoprodutores = $_POST['texto-confirma-pedido-produtores'];
             $urlconsumidores = $_POST['url-consumidores'];
-            $textoconfirma-pedido-consumidores = $_POST['texto-confirma-pedido-consumidores'];
+            $textoconfirmapedidoconsumidores = $_POST['texto-confirma-pedido-consumidores'];
             $urladministradores = $_POST['url-administradores'];
             $situacao = $_POST['situacao'];
            
@@ -44,7 +44,7 @@
             Texto-confirma-ofertas='$textoconfirmaofertas', Texto-confirma-pedido-produtores='$textoconfirmapedidoprodutores',
             URL-consumidores='$urlconsumidores', Texto-confirma-pedido-consumidores='$textoconfirmapedidoconsumidores',
             URL-administradores='$urladministradores', Situacao='$situacao' WHERE codigo='$CODIGO'"); 
-            
+
             mysqli_close($conn);
             ?>
         </td>
