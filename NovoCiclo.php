@@ -10,7 +10,7 @@
 <table  width=95%>
     <tr>
         <td bgcolor="#E6E6E6">
-            <form method="post" action="AtualizarCiclo.php">
+            <form method="post" action="UpdateCiclo.php">
             <p class='titulo'>NOVO CICLO</p>
             <?php
             $CODIGO = $_GET['codigo'];
@@ -60,7 +60,7 @@
                 <br>
                 <?php
                 echo "<a href='index.php'><button class='button3'>CANCELAR</button></a>";
-                echo "&nbsp;&nbsp;&nbsp;<a href='AtualizarCiclo.php'><button class='button3'>ATUALIZAR</button></a></form>";
+                echo "&nbsp;&nbsp;&nbsp;<input type='button' class='button3'>ATUALIZAR</form>";
                 mysqli_close($conn);
                 ?>
             </td>

@@ -10,8 +10,7 @@
 <table  width=95%>
     <tr>
         <td bgcolor="#E6E6E6">
-            <form method="post" action="AtualizarCiclo.php">
-            <p class='titulo'>NOVO CICLO</p>
+            <p class='titulo'>CADASTRO ATUALIZADO</p>
             <?php
             $CODIGO = $_POST['codigo'];
             $data-inicio-geral = $_POST['data-inicio-geral'];
@@ -44,7 +43,6 @@
             Texto-confirma-pedido-produtores='$texto-confirma-pedido-produtores', URL-consumidores='$url-consumidores', Texto-confirma-pedido-consumidores='$texto-confirma-pedido-consumidores',
             URL-administradores='$url-administradores', Situacao='$situacao' WHERE codigo='$CODIGO"); 
 
-            $total = mysqli_num_rows($banco); 
             } 
             ?>
         </td>
@@ -53,8 +51,6 @@
             <td>
                 <br>
                 <?php
-                echo "<a href='index.php'><button class='button3'>CANCELAR</button></a>";
-                echo "&nbsp;&nbsp;&nbsp;<a href='AtualizarCiclo.php'><button class='button3'>ATUALIZAR</button></a></form>";
                 mysqli_close($conn);
                 ?>
             </td>
