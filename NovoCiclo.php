@@ -60,7 +60,7 @@
                 <br>
                 <?php
                 echo "<a href='index.php'><button class='button3'>CANCELAR</button></a>";
-                echo "&nbsp;&nbsp;&nbsp;<input type='button' class='button3'>ATUALIZAR</form>";
+                echo "&nbsp;&nbsp;&nbsp;<input type='submit' class='button3' value='ATUALIZAR'></form>";
                 mysqli_close($conn);
                 ?>
             </td>
