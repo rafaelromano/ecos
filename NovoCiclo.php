@@ -21,7 +21,7 @@
             $total = mysqli_num_rows($banco); 
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
-                echo "<b>Código:</b><input type='hidden' name='codigo' value='".$exibe_ciclos["Codigo"]."'><br>";
+                echo "<b>Código:</b><input type='hidden' name='codigo' value='".$exibe_ciclos["Codigo"]."'>".$exibe_ciclos["Codigo"]."<br>";
                 echo "<b>Data inicial do Ciclo:</b><br><input type='text' size='10' maxlength='10' name='data-inicio-geral' value='".$exibe_ciclos["Data-inicio-geral"]."'><br>";
                 echo "<b>Horário inicial do Ciclo:</b><br><input type='text' size='5'  maxlength='5' name='hora-inicio-geral' value='".$exibe_ciclos["Hora-inicio-geral"]."'><br>";
                 echo "<b>Data final	do Ciclo:</b><br><input type='text' size='10'  maxlength='10' name='data-fim-geral' value='".$exibe_ciclos["Data-fim-geral"]."'><br>";
