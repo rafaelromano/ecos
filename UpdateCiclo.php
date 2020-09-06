@@ -14,29 +14,37 @@
             <?php
             $CODIGO = $_POST['codigo'];
             $datainiciogeral = $_POST['data-inicio-geral'];
-            echo $datainiciogeral;
-//            $hora-inicio-geral = $_POST['hora-inicio-geral'];
-//            $data-fim-geral = $_POST['data-fim-geral'];
-//            $hora-fim-geral = $_POST['hora-fim-geral'];
-//            $data-inicio-produtores = $_POST['data-inicio-produtores'];
-//            $data-fim-produtores = $_POST['data-fim-produtores'];
-//            $data-inicio-consumidores = $_POST['data-inicio-consumidores'];
-//            $data-fim-consumidores = $_POST['data-fim-consumidores'];
-//            $titulo-ciclo-aberto = $_POST['titulo-ciclo-aberto'];
-//            $texto-complementar-título = $_POST['texto-complementar-título'];
-//            $texto-dicas = $_POST['texto-dicas'];
-//            $texto-ciclo-fechado = $_POST['texto-ciclo-fechado'];
-//            $url-produtores = $_POST['url-produtores'];
-//            $texto-confirma-ofertas= $_POST['texto-confirma-ofertas'];
-//            $texto-confirma-pedido-produtores = $_POST['texto-confirma-pedido-produtores'];
-//            $url-consumidores = $_POST['url-consumidores'];
-//            $texto-confirma-pedido-consumidores = $_POST['texto-confirma-pedido-consumidores'];
-//            $url-administradores = $_POST['url-administradores'];
-//            $situacao = $_POST['situacao'];
+            $horainiciogeral = $_POST['hora-inicio-geral'];
+            $datafimgeral = $_POST['data-fim-geral'];
+            $horafimgeral = $_POST['hora-fim-geral'];
+            $datainicioprodutores = $_POST['data-inicio-produtores'];
+            $datafimprodutores = $_POST['data-fim-produtores'];
+            $datainicioconsumidores = $_POST['data-inicio-consumidores'];
+            $datafimconsumidores = $_POST['data-fim-consumidores'];
+            $titulocicloaberto = $_POST['titulo-ciclo-aberto'];
+            $textocomplementar-título = $_POST['texto-complementar-título'];
+            $textodicas = $_POST['texto-dicas'];
+            $textociclo-fechado = $_POST['texto-ciclo-fechado'];
+            $urlprodutores = $_POST['url-produtores'];
+            $textoconfirma-ofertas= $_POST['texto-confirma-ofertas'];
+            $textoconfirma-pedido-produtores = $_POST['texto-confirma-pedido-produtores'];
+            $urlconsumidores = $_POST['url-consumidores'];
+            $textoconfirma-pedido-consumidores = $_POST['texto-confirma-pedido-consumidores'];
+            $urladministradores = $_POST['url-administradores'];
+            $situacao = $_POST['situacao'];
            
             include "conexao.php";
             
-            //$banco = mysqli_query($conn, "UPDATE Ciclos SET Data-inicio-geral='$data-inicio-geral', Hora-inicio-gera='$hora-inicio-geral', Data-fim-geral='$data-fim-geral', Hora-fim-geral='$hora-fim-geral', Data-inicio-produtores='$data-inicio-produtores', Data-fim-produtores='$data-fim-produtores', Data-inicio-consumidores='$data-inicio-consumidores', Data-fim-consumidores='$data-fim-consumidores', Titulo-ciclo-aberto='$titulo-ciclo-aberto', Texto-complementar-título='$texto-complementar-título', Texto-dicas='$texto-dicas', Texto-ciclo-fechado='$texto-ciclo-fechado', URL-produtores='$url-produtores', Texto-confirma-ofertas='$texto-confirma-ofertas', Texto-confirma-pedido-produtores='$texto-confirma-pedido-produtores', URL-consumidores='$url-consumidores', Texto-confirma-pedido-consumidores='$texto-confirma-pedido-consumidores', URL-administradores='$url-administradores', Situacao='$situacao' WHERE codigo='$CODIGO'"); 
+            $banco = mysqli_query($conn, "UPDATE Ciclos SET Data-inicio-geral='$datainiciogeral', Hora-inicio-gera='$horainiciogeral',
+            Data-fim-geral='$datafimgeral', Hora-fim-geral='$horafimgeral', Data-inicio-produtores='$datainicioprodutores',
+            Data-fim-produtores='$datafimprodutores', Data-inicio-consumidores='$datainicioconsumidores', 
+            Data-fim-consumidores='$datafimconsumidores', Titulo-ciclo-aberto='$titulocicloaberto',
+            Texto-complementar-título='$textocomplementartítulo', Texto-dicas='$textodicas',
+            Texto-ciclo-fechado='$textociclofechado', URL-produtores='$urlprodutores',
+            Texto-confirma-ofertas='$textoconfirmaofertas', Texto-confirma-pedido-produtores='$textoconfirmapedidoprodutores',
+            URL-consumidores='$urlconsumidores', Texto-confirma-pedido-consumidores='$textoconfirmapedidoconsumidores',
+            URL-administradores='$urladministradores', Situacao='$situacao' WHERE codigo='$CODIGO'"); 
+            
             mysqli_close($conn);
             ?>
         </td>
