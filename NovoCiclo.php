@@ -22,52 +22,28 @@
             $total = mysqli_num_rows($banco); 
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
-                echo $exibe_ciclos["Codigo"];
-                echo "<b>Ciclo:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Codigo"].">";
-
-                //echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a>";
-                //echo "<b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"];
-                //echo "<b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."<br><br>";
-               
+                echo "<b>Código:</b>".$exibe_ciclos["Codigo"];
+                echo "<b>Data inicial do Ciclo:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Data-inicio-geral"].">";
+                echo "<b>Horário inicial do Ciclo:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Hora-inicio-geral"].">";
+                echo "<b>Data final	do Ciclo:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Data-fim-geral"].">";
+                echo "<b>Horário de encerramento do Ciclo:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Hora-fim-geral"].">";
+                echo "<b>Data inicial para Produtores ofertarem produtos:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Data-inicio-produtores"].">";
+                echo "<b>Data final para Produtores ofertarem produtos:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Data-fim-produtores"].">";
+                echo "<b>Data inicial para Consumidores realizarem pedido:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Data-inicio-consumidores"].">";
+                echo "<b>Data final para Consumidores realizarem pedido:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Data-fim-consumidores"].">";
+                echo "<b>Título para Ciclo aberto:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Titulo-ciclo-aberto"].">";
+                echo "<b>Texto para Ciclo aberto:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Texto-complementar-título"].">";
+                echo "<b>Texto com as Dicas para o Ciclo aberto:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Texto-dicas"].">";
+                echo "<b>Texto para quando o Ciclo estiver fechado:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Texto-ciclo-fechado"].">";
+                echo "<b>URL para a página de Produtores 	:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["URL-produtores"].">";
+                echo "<b>Texto para exibir após Produtor finalizar Ofertas:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Texto-confirma-ofertas"].">";
+                echo "<b>Texto para exibir após Produtores finalizar Pedido:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Texto-confirma-pedido-produtores"].">";
+                echo "<b>URL para a página de Consumidores :</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["URL-consumidores"].">";
+                echo "<b>Texto para exibir após Consumidores finalizar Pedido:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["Texto-confirma-pedido-consumidores"].">";
+                echo "<b>URL para a página de Administradores:</b><input type='text' size='40' name='codigo' value='".$exibe_ciclos["URL-administradores"].">";
+                echo "<b>Situação:</b><input type='radio' name='situacao' value='".$exibe_ciclos["Situacao"].">Aberto - <input type='radio' name='situacao' value='".$exibe_ciclos["Situacao"].">Fechado<br><br>";
             } 
             ?>
- <!--            Data inicial do Ciclo										(atualizar Data-início-geral)
-
-Horário inicial do Ciclo									(atualizar Hora-início-geral
-
-Data final	do Ciclo										(atualizar Data-fim-geral)
-
-Horário de encerramento do Ciclo						(atualizar Hora-fim-geral)
-
-Data inicial para Produtores ofertarem produtos		(atualizar Data-início-produtores)
-
-Data final para Produtores ofertarem produtos		(atualizar Data-fim-produtores)
-
-Data inicial para Consumidores realizarem pedido	(atualizar Data-início-consumidores)
-
-Data final para Consumidores realizarem pedido		(atualizar Data-fim-consumidores)
-
-URL do Banner do Site									(atualizar URL-banner-site)
-
-Título para o período em que o Ciclo estiver aberto	(atualizar Título-ciclo-aberto)
-
-Texto para o período em que o Ciclo estiver aberto	(atualizar Texto-complementar-título)
-
-Texto com as Dicas do OS para o Ciclo aberto			(atualizar Texto-dicas)
-
-Texto para exibir quando o Ciclo estiver fechado		(atualizar Texto-ciclo-fechador)
-
-URL para a página de Produtores 						(atualizar URL-produtores - iniciar com “https://os.eco.br/produtores”)
-
-Texto para exibir após Produtor finalizar Ofertas		(atualizar Texto-confirma-ofertas)
-
-URL para a página de Consumidores 					(atualizar URL-consumidores - iniciar com “https://os.eco.br/consumidores”)
-
-Texto para exibir após Consumidores finalizar Pedido	(atualizar Texto-confirma-pedido-consumidores)
-
-URL para a página de Administradores					(atualizar URL-administradores - iniciar com “https://os.eco.br/admin”)
-
-Situação do Ciclo											(atualizar Situação) -->
         </td>
     </tr>
     <tr>
