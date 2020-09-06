@@ -65,7 +65,8 @@
             'URL-consumidores'='$urlconsumidores', 'Texto-confirma-pedido-consumidores'='$textoconfirmapedidoconsumidores',
             'URL-administradores'='$urladministradores', 'Situacao'='$situacao' WHERE 'Ciclos'.'Codigo'='1'");*/
             
-            mysqli_query($conn,"UPDATE 'Ciclos' SET 'Ciclos'.'Data-inicio-geral'='$datainiciogeral' WHERE 'Ciclos'.'Codigo'='1'");
+            mysqli_query($conn,"UPDATE 'Ciclos' SET 'Ciclos'.'Data-inicio-geral'='$datainiciogeral' 
+            WHERE 'Ciclos'.'Codigo'='1' AND Ciclos.Data-inicio-geral='08/09/2020' AND Ciclos.Hora-inicio-geral='17/09/2020'");
             
             /*Ciclos.Data-inicio-geral='$datainiciogeral', Ciclos.Hora-inicio-geral='$horainiciogeral',
             Ciclos.Data-fim-geral='$datafimgeral', Ciclos.Hora-fim-geral='$horafimgeral', Ciclos.Data-inicio-produtores='$datainicioprodutores',
