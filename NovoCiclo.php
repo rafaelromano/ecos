@@ -41,12 +41,12 @@
                 echo "<b>Texto para exibir após Consumidores finalizar Pedido:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["Texto-confirma-pedido-consumidores"]."'><br>";
                 echo "<b>URL para a página de Administradores:</b><br><input type='text' size='40'  maxlength='200' name='codigo' value='".$exibe_ciclos["URL-administradores"]."'><br>";
                 echo "<b>Situação:</b><br><input type='radio' name='situacao' ".
-                if($exibe_ciclos["Situacao"]=1)
+                if($exibe_ciclos["Situacao"] == 1)
                     {
                     echo "checked";
                 }
                 ."value='1'>Aberto - <input type='radio' name='situacao' ".
-                if($exibe_ciclos["Situacao"]=0)
+                if($exibe_ciclos["Situacao"] == 0)
                 {
                     echo "checked";
                 }
