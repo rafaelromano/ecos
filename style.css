@@ -21,7 +21,6 @@
     background-color: #0489B1;
     color: white;
     padding: 15px 32px;
-    /*width: 25%;*/
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -39,6 +38,7 @@
     font-size: 16px;
     border-radius: 4px;
 }
+
 .texto {
     font-family: "Times New Roman", Times, serif;
     font-size: 26px;
