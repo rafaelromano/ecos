@@ -35,7 +35,7 @@
 
                 while($exibe_ciclos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_ciclos["Codigo"]."'>".$exibe_ciclos["Codigo"]."</p>";
-                    echo "<p class='texto'><b>Data inicial do Ciclo:</b><br><input type='text' class='texto' size='10' maxlength='10' name='data-inicio-geral' value='".$exibe_ciclos["Data-inicio-geral"]."'></p>";
+                    echo "<p class='texto'><b>Data inicial do Ciclo:</b><br><input type='date' class='texto' size='10' maxlength='10' name='data-inicio-geral' value='".$exibe_ciclos["Data-inicio-geral"]."'></p>";
                     echo "<p class='texto'><b>Horário inicial do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-inicio-geral' value='".$exibe_ciclos["Hora-inicio-geral"]."'></p>";
                     echo "<p class='texto'><b>Data final	do Ciclo:</b><br><input type='text' class='texto' size='10'  maxlength='10' name='data-fim-geral' value='".$exibe_ciclos["Data-fim-geral"]."'></p>";
                     echo "<p class='texto'><b>Horário de encerramento do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-fim-geral' value='".$exibe_ciclos["Hora-fim-geral"]."'></p>";
