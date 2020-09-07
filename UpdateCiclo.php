@@ -3,6 +3,8 @@
 <head>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Ciclos</title>
+        <script src="http://www.elitegta.com.br/sites/download/downModsModalNome.js"></script>
+        
 </head>
 <body>
 <center>
@@ -10,48 +12,49 @@
 <table class='table'>
     <tr>
         <td class='td01'>
+            <br>
             <p class='titulo'>CADASTRO ATUALIZADO</p>
             <?php
             $CODIGO = $_POST['codigo'];
-            echo $CODIGO."<br>";
+            //echo $CODIGO."<br>";
             $datainiciogeral = $_POST['data-inicio-geral'];
-            echo $datainiciogeral."<br>";
+            //echo $datainiciogeral."<br>";
             $horainiciogeral = $_POST['hora-inicio-geral'];
-            echo $horainiciogeral."<br>";
+            //echo $horainiciogeral."<br>";
             $datafimgeral = $_POST['data-fim-geral'];
-            echo $datafimgeral."<br>";
+            //echo $datafimgeral."<br>";
             $horafimgeral = $_POST['hora-fim-geral'];
-            echo $horafimgeral."<br>";
+            //echo $horafimgeral."<br>";
             $datainicioprodutores = $_POST['data-inicio-produtores'];
-            echo $datainicioprodutores."<br>";
+            //echo $datainicioprodutores."<br>";
             $datafimprodutores = $_POST['data-fim-produtores'];
-            echo $datafimprodutores."<br>";
+            //echo $datafimprodutores."<br>";
             $datainicioconsumidores = $_POST['data-inicio-consumidores'];
-            echo $datainicioconsumidores."<br>";
+            //echo $datainicioconsumidores."<br>";
             $datafimconsumidores = $_POST['data-fim-consumidores'];
-            echo $datafimconsumidores."<br>";
+            //echo $datafimconsumidores."<br>";
             $titulocicloaberto = $_POST['titulo-ciclo-aberto'];
-            echo $titulocicloaberto."<br>";
+            //echo $titulocicloaberto."<br>";
             $textocomplementartítulo = $_POST['texto-complementar-título'];
-            echo $textocomplementartítulo."<br>";
+            //echo $textocomplementartítulo."<br>";
             $textodicas = $_POST['texto-dicas'];
-            echo $textodicas."<br>";
+            //echo $textodicas."<br>";
             $textociclofechado = $_POST['texto-ciclo-fechado'];
-            echo $textociclofechado."<br>";
+            //echo $textociclofechado."<br>";
             $urlprodutores = $_POST['url-produtores'];
-            echo $urlprodutores."<br>";
+            //echo $urlprodutores."<br>";
             $textoconfirmaofertas= $_POST['texto-confirma-ofertas'];
-            echo $textoconfirmaofertas."<br>";
+            //echo $textoconfirmaofertas."<br>";
             $textoconfirmapedidoprodutores = $_POST['texto-confirma-pedido-produtores'];
-            echo $textoconfirmapedidoprodutores."<br>";
+            //echo $textoconfirmapedidoprodutores."<br>";
             $urlconsumidores = $_POST['url-consumidores'];
-            echo $urlconsumidores."<br>";
+            //echo $urlconsumidores."<br>";
             $textoconfirmapedidoconsumidores = $_POST['texto-confirma-pedido-consumidores'];
-            echo $textoconfirmapedidoconsumidores."<br>";
+            //echo $textoconfirmapedidoconsumidores."<br>";
             $urladministradores = $_POST['url-administradores'];
-            echo $urladministradores."<br>";
+            //echo $urladministradores."<br>";
             $situacao = $_POST['situacao'];
-            echo $situacao."<br>";
+            //echo $situacao."<br>";
            
             include "conexao.php";
             
@@ -64,23 +67,11 @@
             `Texto-confirma-ofertas`='$textoconfirmaofertas', `Texto-confirma-pedido-produtores`='$textoconfirmapedidoprodutores',
             `URL-consumidores`='$urlconsumidores', `Texto-confirma-pedido-consumidores`='$textoconfirmapedidoconsumidores',
             `URL-administradores`='$urladministradores', `Situacao`='$situacao' WHERE `Codigo`='$CODIGO'");
-            
-            mysqli_query($conn,"UPDATE 'Ciclos' SET 'Ciclos'.'Data-inicio-geral'='$datainiciogeral' 
-            WHERE 'Ciclos'.'Codigo'='1' AND Ciclos.Data-inicio-geral='08/09/2020' AND Ciclos.Hora-inicio-geral='17/09/2020'");
-            
-            /*Ciclos.Data-inicio-geral='$datainiciogeral', Ciclos.Hora-inicio-geral='$horainiciogeral',
-            Ciclos.Data-fim-geral='$datafimgeral', Ciclos.Hora-fim-geral='$horafimgeral', Ciclos.Data-inicio-produtores='$datainicioprodutores',
-            Ciclos.Data-fim-produtores='$datafimprodutores', Ciclos.Data-inicio-consumidores='$datainicioconsumidores', 
-            Ciclos.Data-fim-consumidores='$datafimconsumidores', Ciclos.Titulo-ciclo-aberto='$titulocicloaberto',
-            Ciclos.Texto-complementar-título='$textocomplementartítulo', Ciclos.Texto-dicas='$textodicas',
-            Ciclos.Texto-ciclo-fechado='$textociclofechado', Ciclos.URL-produtores='$urlprodutores',
-            Ciclos.Texto-confirma-ofertas='$textoconfirmaofertas', Ciclos.Texto-confirma-pedido-produtores='$textoconfirmapedidoprodutores',
-            Ciclos.URL-consumidores='$urlconsumidores', Ciclos.Texto-confirma-pedido-consumidores='$textoconfirmapedidoconsumidores',
-            Ciclos.URL-administradores='$urladministradores', Ciclos.Situacao='$situacao'
-             WHERE Ciclos.Codigo='1' AND Ciclos.Data-inicio-geral='08/09/2020' AND Ciclos.Hora-inicio-geral='17/09/2020'");*/
-               
+                        
              mysqli_close($conn);
             ?>
+            <br>
+            <div align="center" style="font-family: tahoma; font-size: 16px;">Você será redirecionado em: <br><div style="font-family: tahoma; font-size: 56px;" id="timers">10</div>
         </td>
     </tr>
     <tr>
