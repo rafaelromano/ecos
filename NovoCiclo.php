@@ -7,7 +7,8 @@
 <script>
     function validar()
         {
-            var datainiciogeral = document.getElementById("Data-inicio-geral");
+            /*var datainiciogeral = document.getElementById("Data-inicio-geral");*/
+            var datainiciogeral = formulario.Data-inicio-geral.value;
             var horainiciogeral = document.getElementById("hora-inicio-geral");
             var datafimgeral = document.getElementById("data-fim-geral");
             var horafimgeral = document.getElementById("hora-fim-geral");
@@ -30,7 +31,7 @@
             if(datainiciogeral.value == "dd/mm/aaaa")
                 {
                     alert("Data Inicial do Clico não definida!");
-                    data-inicio-geral.value.focus();
+                    formulario.data-inicio-geral.value.focus();
                     return;
                 }
             
