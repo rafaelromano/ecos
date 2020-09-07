@@ -55,7 +55,7 @@
            
             include "conexao.php";
             
-            $sql="INSERT INTO `Ciclos` (`Codigo`, `Data-inicio-geral`, `Hora-inicio-geral`, `Data-fim-geral`,
+            mysqli_query($conn,"INSERT INTO `Ciclos` (`Codigo`, `Data-inicio-geral`, `Hora-inicio-geral`, `Data-fim-geral`,
             `Hora-fim-geral`, `Data-inicio-produtores`, `Data-fim-produtores`, `Data-inicio-consumidores`, `Data-fim-consumidores`,
             `Titulo-ciclo-aberto`, `Texto-complementar-título`, `Texto-dicas`, `Texto-ciclo-fechado`, `URL-produtores`,
             `Texto-confirma-ofertas`, `Texto-confirma-pedido-produtores`, `URL-consumidores`, `Texto-confirma-pedido-consumidores`,
@@ -63,9 +63,7 @@
             (NULL,'$datainiciogeral','$horainiciogeral','$datafimgeral','$horafimgeral','$datainicioprodutores','$datafimprodutores',
            '$datainicioconsumidores','$datafimconsumidores','$titulocicloaberto','$textocomplementartítulo','$textodicas',
            '$textociclofechado','$urlprodutores','$textoconfirmaofertas','$textoconfirmapedidoprodutores','$urlconsumidores',
-           '$textoconfirmapedidoconsumidores','$urladministradores','$situacao')";
-            
-            $res= mysqli_query($conn,$sql); 
+           '$textoconfirmapedidoconsumidores','$urladministradores','$situacao')");
             
             mysqli_close($conn);
             ?>
