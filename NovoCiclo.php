@@ -67,7 +67,7 @@
             }
             else
             {
-                echo "<p class='texto'><b>Data inicial do Ciclo:</b><br><input type='text' class='texto' size='10' maxlength='10' name='data-inicio-geral'></p>";
+                echo "<p class='texto'><b>Data inicial do Ciclo:</b><br><input type='date' class='texto' size='10' maxlength='10' name='data-inicio-geral'></p>";
                 echo "<p class='texto'><b>Horário inicial do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-inicio-geral'></p>";
                 echo "<p class='texto'><b>Data final	do Ciclo:</b><br><input type='text' class='texto' size='10'  maxlength='10' name='data-fim-geral'></p>";
                 echo "<p class='texto'><b>Horário de encerramento do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-fim-geral'></p>";
