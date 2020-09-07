@@ -79,7 +79,7 @@
             Ciclos.URL-administradores='$urladministradores', Ciclos.Situacao='$situacao'
              WHERE Ciclos.Codigo='1' AND Ciclos.Data-inicio-geral='08/09/2020' AND Ciclos.Hora-inicio-geral='17/09/2020'");*/
                
-            
+             mysqli_close($conn);
             ?>
         </td>
     </tr>
