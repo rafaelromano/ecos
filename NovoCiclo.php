@@ -6,8 +6,8 @@
         <script>
             function validar()
                 {
-                    //var datainiciogeral = document.getElementById("Data-inicio-geral");
-                    var datainiciogeral = formulario.Data-inicio-geral.value;
+                    var datainiciogeral = document.getElementById("Data-inicio-geral");
+                    //var datainiciogeral = formulario.Data-inicio-geral.value;
                     var horainiciogeral = document.getElementById("hora-inicio-geral");
                     var datafimgeral = document.getElementById("data-fim-geral");
                     var horafimgeral = document.getElementById("hora-fim-geral");
@@ -26,10 +26,8 @@
                     var textoconfirmapedidoconsumidores = document.getElementById("texto-confirma-pedido-consumidores");
                     var urladministradores = document.getElementById("url-administradores");
                     var situacao = document.getElementById("situacao");
-                    
-                    write(datainiciogeral);
 
-                    if(datainiciogeral.value == "dd/mm/aaaa" || datainiciogeral.value == " ")
+                    if(datainiciogeral.value == "")
                         {
                             alert("Data Inicial do Clico não definida!");
                             formulario.data-inicio-geral.value.focus();
