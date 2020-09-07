@@ -3,41 +3,41 @@
 <head>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Ciclos</title>
-</head>
-<script>
-    function validar()
-        {
-            var datainiciogeral = document.getElementById("Data-inicio-geral");
-            /*var datainiciogeral = formulario.Data-inicio-geral.value;*/
-            var horainiciogeral = document.getElementById("hora-inicio-geral");
-            var datafimgeral = document.getElementById("data-fim-geral");
-            var horafimgeral = document.getElementById("hora-fim-geral");
-            var datainicioprodutores = document.getElementById("data-inicio-produtores");
-            var datafimprodutores = document.getElementById("data-fim-produtores");
-            var datainicioconsumidores = document.getElementById("data-inicio-consumidores");
-            var datafimconsumidores = document.getElementById("data-fim-consumidores");
-            var titulocicloaberto = document.getElementById("titulo-ciclo-aberto");
-            var textocomplementartítulo = document.getElementById("texto-complementar-título");
-            var textodicas = document.getElementById("texto-dicas");
-            var textociclofechado = document.getElementById("texto-ciclo-fechado");
-            var urlprodutores = document.getElementById("url-produtores");
-            var textoconfirmaofertas= document.getElementById("texto-confirma-ofertas");
-            var textoconfirmapedidoprodutores = document.getElementById("texto-confirma-pedido-produtores");
-            var urlconsumidores = document.getElementById("url-consumidores");
-            var textoconfirmapedidoconsumidores = document.getElementById("texto-confirma-pedido-consumidores");
-            var urladministradores = document.getElementById("url-administradores");
-            var situacao = document.getElementById("situacao");
-            
-            if(datainiciogeral.value == "dd/mm/aaaa")
+        <script>
+            function validar()
                 {
-                    alert("Data Inicial do Clico não definida!");
-                    formulario.data-inicio-geral.value.focus();
-                    return false;
+                    //var datainiciogeral = document.getElementById("Data-inicio-geral");
+                    var datainiciogeral = formulario.Data-inicio-geral.value;
+                    var horainiciogeral = document.getElementById("hora-inicio-geral");
+                    var datafimgeral = document.getElementById("data-fim-geral");
+                    var horafimgeral = document.getElementById("hora-fim-geral");
+                    var datainicioprodutores = document.getElementById("data-inicio-produtores");
+                    var datafimprodutores = document.getElementById("data-fim-produtores");
+                    var datainicioconsumidores = document.getElementById("data-inicio-consumidores");
+                    var datafimconsumidores = document.getElementById("data-fim-consumidores");
+                    var titulocicloaberto = document.getElementById("titulo-ciclo-aberto");
+                    var textocomplementartítulo = document.getElementById("texto-complementar-título");
+                    var textodicas = document.getElementById("texto-dicas");
+                    var textociclofechado = document.getElementById("texto-ciclo-fechado");
+                    var urlprodutores = document.getElementById("url-produtores");
+                    var textoconfirmaofertas= document.getElementById("texto-confirma-ofertas");
+                    var textoconfirmapedidoprodutores = document.getElementById("texto-confirma-pedido-produtores");
+                    var urlconsumidores = document.getElementById("url-consumidores");
+                    var textoconfirmapedidoconsumidores = document.getElementById("texto-confirma-pedido-consumidores");
+                    var urladministradores = document.getElementById("url-administradores");
+                    var situacao = document.getElementById("situacao");
+                    
+                    if(datainiciogeral.value == "dd/mm/aaaa" || datainiciogeral.value == " ")
+                        {
+                            alert("Data Inicial do Clico não definida!");
+                            formulario.data-inicio-geral.value.focus();
+                            return false                           // se inválida :(
+                        }
+                    
                 }
-            
-            alert("Formulário enviado!");
-        }
-</script>
+        </script>
+</head>
+
 <body>
 <center>
 <p class='titulo1'>Feira Orgânico Solidário </p>
