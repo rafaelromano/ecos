@@ -38,10 +38,12 @@
                 <a href="NovoCiclo.php?codigo=<?php echo $exibe_ciclos["Codigo"]; ?>">
                 <?php
                 echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a></p>";
-                $datainiciogeral= strtotime($exibe_ciclos["Titulo-ciclo-aberto"]);
+                $datainiciogeral= strtotime($exibe_ciclos["Data-inicio-geral"]);
                 $datainiciogeral=date("m-d-Y",$datainiciogeral);
                 echo "<p class='texto'><b> - Data Inicial:</b> ".$datainiciogeral."</p>";
-                echo "<p class='texto'><b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br>";
+                $datafinalgeral= strtotime($exibe_ciclos["Data-fim-geral"]);
+                $datafinalgeral=date("m-d-Y",$datafinalgeral);
+                echo "<p class='texto'><b> - Data Final: </b>".$datafinalgeral."</p><br>";
                 //echo "<p class='texto'><b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
                 //echo "<p class='texto'><b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br>";
             } 
