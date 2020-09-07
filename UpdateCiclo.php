@@ -72,7 +72,7 @@
              mysqli_close($conn);
             ?>
             <br>
-            <div align="center" style="font-family: tahoma; font-size: 16px;">Você será redirecionado em: <br><div style="font-family: tahoma; font-size: 56px;" id="timers">3 segundos</div>
+            <div align="center" class="titulo">Você será redirecionado em: <br><div classs="titulo1" id="timers">3 segundos</div>
         </td>
     </tr>
     <tr>
