@@ -7,8 +7,8 @@
 <script>
     function validar()
         {
-            /*var datainiciogeral = document.getElementById("Data-inicio-geral");*/
-            var datainiciogeral = formulario.Data-inicio-geral.value;
+            var datainiciogeral = document.getElementById("Data-inicio-geral");
+            /*var datainiciogeral = formulario.Data-inicio-geral.value;*/
             var horainiciogeral = document.getElementById("hora-inicio-geral");
             var datafimgeral = document.getElementById("data-fim-geral");
             var horafimgeral = document.getElementById("hora-fim-geral");
