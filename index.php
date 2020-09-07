@@ -39,7 +39,7 @@
                 <?php
                 echo "</b>" . $exibe_ciclos["Titulo-ciclo-aberto"]."</a></p>";
                 $datainiciogeral= strtotime($exibe_ciclos["Titulo-ciclo-aberto"]);
-                $datainiciogeral=date("d-m-y",$datainiciogeral);
+                $datainiciogeral=date("m-d-Y",$datainiciogeral);
                 echo "<p class='texto'><b> - Data Inicial:</b> ".$datainiciogeral."</p>";
                 echo "<p class='texto'><b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br>";
                 //echo "<p class='texto'><b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
