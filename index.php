@@ -50,7 +50,7 @@
                 <br>
                 <?php
                 if($pagina > 1) {
-                    echo "<a href='index.php?pagina=".($pagina - 1)."'><button class='button3'>Ciclos Anteriores</button></a>&nbsp;&nbsp;";
+                    echo "<a href='index.php?pagina=".($pagina - 1)."'><button class='button4'>Ciclos Anteriores</button></a>&nbsp;&nbsp;";
                 }
     
                 for($i = 1; $i < $numPaginas; $i++) {
@@ -59,7 +59,7 @@
                 }
     
                 if($pagina < $numPaginas) {
-                    echo "&nbsp;&nbsp;<a href='index.php?pagina=".($pagina + 1)."'><button class='button3'>Exibir Próximos Ciclos</button></a>";
+                    echo "&nbsp;&nbsp;<a href='index.php?pagina=".($pagina + 1)."'><button class='button4'>Exibir Próximos Ciclos</button></a>";
                 }
                 mysqli_close($conn);
                 ?>
