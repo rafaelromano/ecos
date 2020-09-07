@@ -12,8 +12,8 @@
         <td class='td01'>
             <p class='titulo'>CADASTRO ATUALIZADO</p>
             <?php
-           // $CODIGO = $_POST['codigo'];
-            //echo $CODIGO."<br>";
+            ini_set('display_errors', 1);
+            error_reporting(E_ALL | E_STRICT);
             $datainiciogeral = $_POST['data-inicio-geral'];
             echo $datainiciogeral."<br>";
             $horainiciogeral = $_POST['hora-inicio-geral'];
