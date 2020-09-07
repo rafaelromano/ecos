@@ -27,6 +27,8 @@
                     var urladministradores = document.getElementById("url-administradores");
                     var situacao = document.getElementById("situacao");
                     
+                    write(datainiciogeral);
+
                     if(datainiciogeral.value == "dd/mm/aaaa" || datainiciogeral.value == " ")
                         {
                             alert("Data Inicial do Clico não definida!");
