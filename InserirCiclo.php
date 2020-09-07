@@ -50,8 +50,8 @@
             echo $textoconfirmapedidoconsumidores."<br>";
             $urladministradores = $_POST['url-administradores'];
             echo $urladministradores."<br>";
-            $situacao = $_POST['situacao'];
-            echo $situacao."<br>";
+            //$situacao = $_POST['situacao'];
+            //echo $situacao."<br>";
            
             include "conexao.php";
             
