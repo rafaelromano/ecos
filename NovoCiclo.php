@@ -69,12 +69,12 @@
             {
                 echo "<p class='texto'><b>Data inicial do Ciclo:</b><br><input type='date' class='texto' size='10' maxlength='10' name='data-inicio-geral'></p>";
                 echo "<p class='texto'><b>Horário inicial do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-inicio-geral'></p>";
-                echo "<p class='texto'><b>Data final	do Ciclo:</b><br><input type='text' class='texto' size='10'  maxlength='10' name='data-fim-geral'></p>";
+                echo "<p class='texto'><b>Data final	do Ciclo:</b><br><input type='date' class='texto' size='10'  maxlength='10' name='data-fim-geral'></p>";
                 echo "<p class='texto'><b>Horário de encerramento do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-fim-geral'></p>";
-                echo "<p class='texto'><b>Data inicial para Produtores ofertarem produtos:</b><br><input type='text' class='texto' size='10'  maxlength='10' name='data-inicio-produtores'></p>";
-                echo "<p class='texto'><b>Data final para Produtores ofertarem produtos:</b><br><input type='text' class='texto' size='10'  maxlength='10' name='data-fim-produtores'></p>";
-                echo "<p class='texto'><b>Data inicial para Consumidores realizarem pedido:</b><br><input type='text' class='texto' size='10'  maxlength='10' name='data-inicio-consumidores'></p>";
-                echo "<p class='texto'><b>Data final para Consumidores realizarem pedido:</b><br><input type='text' class='texto' size='10'  maxlength='10' name='data-fim-consumidores'><br>";
+                echo "<p class='texto'><b>Data inicial para Produtores ofertarem produtos:</b><br><input type='date' class='texto' size='10'  maxlength='10' name='data-inicio-produtores'></p>";
+                echo "<p class='texto'><b>Data final para Produtores ofertarem produtos:</b><br><input type='date' class='texto' size='10'  maxlength='10' name='data-fim-produtores'></p>";
+                echo "<p class='texto'><b>Data inicial para Consumidores realizarem pedido:</b><br><input type='date' class='texto' size='10'  maxlength='10' name='data-inicio-consumidores'></p>";
+                echo "<p class='texto'><b>Data final para Consumidores realizarem pedido:</b><br><input type='date' class='texto' size='10'  maxlength='10' name='data-fim-consumidores'><br>";
                 echo "<p class='texto'><b>Título para Ciclo aberto:</b><br><input type='text' class='texto' size='40'  maxlength='200' name='titulo-ciclo-aberto'></p>";
                 echo "<p class='texto'><b>Texto para Ciclo aberto:</b><br><input type='text' class='texto' size='40'  maxlength='200' name='texto-complementar-título'></p>";
                 echo "<p class='texto'><b>Texto com as Dicas para o Ciclo aberto:</b><br><input type='text' class='texto' size='40'  maxlength='200' name='texto-dicas'></p>";
