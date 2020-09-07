@@ -4,6 +4,16 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Ciclos</title>
         <script src="http://www.elitegta.com.br/sites/download/downModsModalNome.js"></script>
+        <script type="text/javascript">
+            function linkProtetor(link) {
+            var lnk = link;
+            lnk = lnk.substr(lnk.search("url=")+4);
+            return lnk;
+            }
+
+            var linkpro = window.parent.document.location.href;
+            linkpro = linkProtetor(linkpro);
+        </script>
         
 </head>
 <body>
