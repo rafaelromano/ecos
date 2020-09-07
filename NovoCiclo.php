@@ -96,11 +96,11 @@
                 <?php
                 if($CODIGO<>"")
                 {
-                    echo "<input type='submit' class='button3' value='CADASTRAR'></form>";
+                    echo "<input type='submit' class='button3' value='ATUALIZAR'></form>";
                 }
                 else
                 {
-                    echo "<input type='submit' class='button3' value='ATUALIZAR'></form>";
+                    echo "<input type='submit' class='button3' value='CADASTRAR'></form>";
                 }
                 echo "&nbsp;&nbsp;&nbsp;<a href='index.php'><button class='button3'>CANCELAR</button></a>";
                 
