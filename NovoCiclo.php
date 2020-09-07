@@ -27,7 +27,7 @@
                     var urladministradores = document.getElementById("url-administradores");
                     var situacao = document.getElementById("situacao");
 
-                    if(formulario.data-inicio-geral.value == "")
+                    if(formulario.data-inicio-geral.value == " " || formulario.data-inicio-geral.value == NULL)
                         {
                             alert("Data Inicial do Clico não definida!");
                             formulario.data-inicio-geral.value.focus();
