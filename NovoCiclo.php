@@ -36,7 +36,7 @@
                 while($exibe_ciclos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_ciclos["Codigo"]."'>".$exibe_ciclos["Codigo"]."</p>";
                     echo "<p class='texto'><b>Data inicial do Ciclo:</b><br><input type='date' class='texto' size='10' maxlength='10' name='data-inicio-geral' value='".$exibe_ciclos["Data-inicio-geral"]."'></p>";
-                    echo "<p class='texto'><b>Horário inicial do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-inicio-geral' value='".$exibe_ciclos["Hora-inicio-geral"]."'></p>";
+                    echo "<p class='texto'><b>Horário inicial do Ciclo:</b><br><input type='time' class='texto' size='5'  maxlength='5' name='hora-inicio-geral' value='".$exibe_ciclos["Hora-inicio-geral"]."'></p>";
                     echo "<p class='texto'><b>Data final	do Ciclo:</b><br><input type='text' class='texto' size='10'  maxlength='10' name='data-fim-geral' value='".$exibe_ciclos["Data-fim-geral"]."'></p>";
                     echo "<p class='texto'><b>Horário de encerramento do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-fim-geral' value='".$exibe_ciclos["Hora-fim-geral"]."'></p>";
                     echo "<p class='texto'><b>Data inicial para Produtores ofertarem produtos:</b><br><input type='text' class='texto' size='10'  maxlength='10' name='data-inicio-produtores' value='".$exibe_ciclos["Data-inicio-produtores"]."'></p>";
@@ -62,15 +62,15 @@
                         $selecao2="checked";
                         }
                     
-                    echo "<p class='texto'><b>Situação:</b><br><input type='radio' name='situacao' value='1' ".$selecao1.">Aberto - <input type='radio' name='situacao' value='0' ".$selecao2.">Fechado<br><br></p>";      
+                    echo "<p class='texto'><b>Situação:</b><br><input type='radio' name='situacao' value='1' ".$selecao1.">Aberto - <input type='radio' name='situacao' value='0' ".$selecao2.">Fechado<br></p>";      
                     } 
             }
             else
             {
                 echo "<p class='texto'><b>Data inicial do Ciclo:</b><br><input type='date' class='texto' size='10' maxlength='10' name='data-inicio-geral'></p>";
-                echo "<p class='texto'><b>Horário inicial do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-inicio-geral'></p>";
+                echo "<p class='texto'><b>Horário inicial do Ciclo:</b><br><input type='time' class='texto' size='5'  maxlength='5' name='hora-inicio-geral'></p>";
                 echo "<p class='texto'><b>Data final	do Ciclo:</b><br><input type='date' class='texto' size='10'  maxlength='10' name='data-fim-geral'></p>";
-                echo "<p class='texto'><b>Horário de encerramento do Ciclo:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='hora-fim-geral'></p>";
+                echo "<p class='texto'><b>Horário de encerramento do Ciclo:</b><br><input type='time' class='texto' size='5'  maxlength='5' name='hora-fim-geral'></p>";
                 echo "<p class='texto'><b>Data inicial para Produtores ofertarem produtos:</b><br><input type='date' class='texto' size='10'  maxlength='10' name='data-inicio-produtores'></p>";
                 echo "<p class='texto'><b>Data final para Produtores ofertarem produtos:</b><br><input type='date' class='texto' size='10'  maxlength='10' name='data-fim-produtores'></p>";
                 echo "<p class='texto'><b>Data inicial para Consumidores realizarem pedido:</b><br><input type='date' class='texto' size='10'  maxlength='10' name='data-inicio-consumidores'></p>";
