@@ -55,15 +55,15 @@
            
             include "conexao.php";
             
-            /*mysqli_query($conn, "UPDATE 'Ciclos' SET 'Data-inicio-geral'='$datainiciogeral', 'Hora-inicio-geral'='$horainiciogeral',
-            'Data-fim-geral'='$datafimgeral', 'Hora-fim-geral'='$horafimgeral', 'Data-inicio-produtores'='$datainicioprodutores',
-            'Data-fim-produtores'='$datafimprodutores', 'Data-inicio-consumidores'='$datainicioconsumidores', 
-            'Data-fim-consumidores'='$datafimconsumidores', 'Titulo-ciclo-aberto'='$titulocicloaberto',
-            'Texto-complementar-título'='$textocomplementartítulo', 'Texto-dicas'='$textodicas',
-            'Texto-ciclo-fechado'='$textociclofechado', 'URL-produtores'='$urlprodutores',
-            'Texto-confirma-ofertas'='$textoconfirmaofertas', 'Texto-confirma-pedido-produtores'='$textoconfirmapedidoprodutores',
-            'URL-consumidores'='$urlconsumidores', 'Texto-confirma-pedido-consumidores'='$textoconfirmapedidoconsumidores',
-            'URL-administradores'='$urladministradores', 'Situacao'='$situacao' WHERE 'Ciclos'.'Codigo'='1'");*/
+            mysqli_query($conn, "UPDATE `Ciclos` SET `Data-inicio-geral`='$datainiciogeral', `Hora-inicio-geral`='$horainiciogeral',
+            `Data-fim-geral`='$datafimgeral', `Hora-fim-geral`='$horafimgeral', `Data-inicio-produtores`='$datainicioprodutores',
+            `Data-fim-produtores`='$datafimprodutores', `Data-inicio-consumidores`='$datainicioconsumidores', 
+            `Data-fim-consumidores`='$datafimconsumidores', `Titulo-ciclo-aberto`='$titulocicloaberto',
+            `Texto-complementar-título`='$textocomplementartítulo', `Texto-dicas`='$textodicas',
+            `Texto-ciclo-fechado`='$textociclofechado', `URL-produtores`='$urlprodutores',
+            `Texto-confirma-ofertas`='$textoconfirmaofertas', `Texto-confirma-pedido-produtores`='$textoconfirmapedidoprodutores',
+            `URL-consumidores`='$urlconsumidores', `Texto-confirma-pedido-consumidores`='$textoconfirmapedidoconsumidores',
+            `URL-administradores`='$urladministradores', `Situacao`='$situacao' WHERE `Codigo`='$CODIGO'");
             
             mysqli_query($conn,"UPDATE 'Ciclos' SET 'Ciclos'.'Data-inicio-geral'='$datainiciogeral' 
             WHERE 'Ciclos'.'Codigo'='1' AND Ciclos.Data-inicio-geral='08/09/2020' AND Ciclos.Hora-inicio-geral='17/09/2020'");
