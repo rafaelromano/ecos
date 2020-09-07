@@ -32,7 +32,7 @@
                 {
                     alert("Data Inicial do Clico não definida!");
                     formulario.data-inicio-geral.value.focus();
-                    return;
+                    return false;
                 }
             
             alert("Formulário enviado!");
@@ -130,11 +130,11 @@
                 <?php
                 if($CODIGO<>"")
                 {
-                    echo "<input type='submit' class='button3' value='ATUALIZAR'></form>";
+                    echo "<input type='submit' class='button3' value='ATUALIZAR' onclick='return validar()'></form>";
                 }
                 else
                 {
-                    echo "<input type='submit' class='button3' value='CADASTRAR'></form>";
+                    echo "<input type='submit' class='button3' value='CADASTRAR' onclick='return validar()'></form>";
                 }
                 echo "&nbsp;&nbsp;&nbsp;<a href='index.php'><button class='button3'>CANCELAR</button></a>";
                 
