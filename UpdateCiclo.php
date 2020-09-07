@@ -3,18 +3,9 @@
 <head>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Ciclos</title>
-        <script src="http://www.elitegta.com.br/sites/download/downModsModalNome.js"></script>
-        <script type="text/javascript">
-            function linkProtetor(link) {
-            var lnk = link;
-            lnk = lnk.substr(lnk.search("url=")+4);
-            return lnk;
-            }
-
-            var linkpro = window.parent.document.location.href;
-            linkpro = linkProtetor(linkpro);
-        </script>
+        <meta http-equiv="refresh" content="3;url=index.php" />
         
+
 </head>
 <body>
 <center>
@@ -81,7 +72,7 @@
              mysqli_close($conn);
             ?>
             <br>
-            <div align="center" style="font-family: tahoma; font-size: 16px;">Você será redirecionado em: <br><div style="font-family: tahoma; font-size: 56px;" id="timers">10</div>
+            <div align="center" style="font-family: tahoma; font-size: 16px;">Você será redirecionado em: <br><div style="font-family: tahoma; font-size: 56px;" id="timers">3 segundos</div>
         </td>
     </tr>
     <tr>
