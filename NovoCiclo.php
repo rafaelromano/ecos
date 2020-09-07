@@ -7,9 +7,9 @@
 <body>
 <center>
 <p class='titulo1'>Feira Orgânico Solidário </p>
-<table  width=95%>
+<table class='table'>
     <tr>
-        <td bgcolor="#E6E6E6">
+        <td class='td01'>
             <p class='titulo'>NOVO CICLO</p>
             <?php
             $CODIGO = $_GET['codigo'];
@@ -78,7 +78,7 @@
                 echo "<p class='texto'><b>Texto para exibir após Produtores finalizar Pedido:</b><br><input type='text' class='texto' size='40'  maxlength='200' name='texto-confirma-pedido-produtores'></p>";
                 echo "<p class='texto'><b>URL para a página de Consumidores:</b><br><input type='text' class='texto' size='40'  maxlength='200' name='url-consumidores'></p>";
                 echo "<p class='texto'><b>Texto para exibir após Consumidores finalizar Pedido:</b><br><input type='text' class='texto' size='40'  maxlength='200' name='texto-confirma-pedido-consumidores'></p>";
-                echo "<p class='texto'><b>URL para a página de Administradores:</b><br><input type='text' class='texto' size='40'  maxlength='200' name='url-administradores'></p>";
+                echo "<p class='texto'><b>URL para a página de Administradores:</b><br><input type='text' class='texto' 0size='40'  maxlength='200' name='url-administradores'></p>";
                 echo "<p class='texto'><b>Situação:</b><br><input type='radio' name='situacao' value='1'>Aberto - <input type='radio' name='situacao' value='0'>Fechado<br></p>"; 
             }
             ?>

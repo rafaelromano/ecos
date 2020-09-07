@@ -7,9 +7,9 @@
 <body>
 <center>
 <p class='titulo1'>Feira Orgânico Solidário </p>
-<table  width=95%>
+<table class='table'>
     <tr>
-        <td bgcolor="#E6E6E6">
+        <td class='td01'>
             <p class='titulo'>CADASTRO ATUALIZADO</p>
             <?php
             $CODIGO = $_POST['codigo'];
