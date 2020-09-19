@@ -19,7 +19,7 @@
             include "conexao.php";
             $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1; 
 
-            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' ORDER BY 'Data-inicio-geral' DESC"); 
+            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' ORDER BY 'Data-inicio-geral'"); 
 
             $total = mysqli_num_rows($banco); 
 
