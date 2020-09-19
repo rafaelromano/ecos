@@ -19,7 +19,7 @@
             include "conexao.php";
             $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1; 
 
-            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' ORDER BY 'Data-inicio-geral'"); 
+            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1'"); 
 
             $total = mysqli_num_rows($banco); 
 
@@ -29,7 +29,7 @@
 
             $inicio = ($registros*$pagina)-$registros; 
 
-            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' LIMIT $inicio,$registros"); 
+            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' LIMIT $inicio,$registros  ORDER BY 'Data-inicio-geral'"); 
             $total = mysqli_num_rows($banco); 
 
             while($exibe_ciclos = mysqli_fetch_array($banco)) { 
