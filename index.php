@@ -29,7 +29,7 @@
 
             $inicio = ($registros*$pagina)-$registros; 
             
-            $banco = mysqli_query($conn, "SELECT * FROM Ciclo WHERE Situacao='1' ORDER BY 'Data-inicio-geral' ASC");
+            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' ORDER BY 'Data-inicio-geral' ASC");
             LIMIT $inicio,$registros"); 
             $total = mysqli_num_rows($banco); 
 
