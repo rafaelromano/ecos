@@ -41,7 +41,7 @@
                 echo "</b>" . $exibe_produtos["Codigo"]."</a></p>";
                 echo "<p class='texto2'><b> Código Produtor:</b> ".$exibe_produtos["PT-Codigo"]."</p>";
                 echo "<p class='texto2'><b> Código Categoria: </b>".$exibe_produtos["CP-Codigo"]."</p>";
-                echo "<p class='texto2'><b> Descição:</b> ".$exibe_produtos["Descicrao"]."</p>";
+                echo "<p class='texto2'><b> Descrição:</b> ".$exibe_produtos["Descricao"]."</p>";
                 echo "<p class='texto2'><b> Quantidade Disponivel: </b>".$exibe_produtos["Qtd-Disponivel"]."</p>";
                 echo "<p class='texto2'><b> Custo: R$</b>".$exibe_produtos["Custo"]."</p>";
                 echo "<p class='texto2'><b> Preço: R$</b>".$exibe_produtos["Preco"]."</p>";
