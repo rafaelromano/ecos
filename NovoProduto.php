@@ -65,6 +65,7 @@
                               
                 $banco = mysqli_query($conn, "SELECT * FROM Produtos WHERE Codigo='".$CODIGO."'"); 
                 $total = mysqli_num_rows($banco); 
+                echo $total;
                 while($exibe_produtos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_produtos["Codigo"]."'>".$exibe_produtos["Codigo"]."</p>";
 
