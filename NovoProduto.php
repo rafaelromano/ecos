@@ -91,13 +91,13 @@
                 $total = mysqli_num_rows($banco1); 
                 echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
                 while($exibe_produtores = mysqli_fetch_array($banco1)) { 
-                    echo "<option value='".$exibe_produtores["Codigo"]."'>".$exibe_produtores["Descicao"]."</option></p>";
+                    echo "<option value='".$exibe_produtores["Codigo"]."'>".$exibe_produtores["Nome"]."</option></p>";
                 }
                 echo "</select>";
 
-                $banco2 = mysqli_query($conn, "SELECT * FROM Grupos-Produtores"); 
+                $banco2 = mysqli_query($conn, "SELECT * FROM Grupos-Produtos"); 
                 $total = mysqli_num_rows($banco2); 
-                echo "<p class='texto'><b>Código Produtor:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
+                echo "<p class='texto'><b>Categoria:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
                 while($exibe_categoria = mysqli_fetch_array($banco2)) { 
                     echo "<option value='".$exibe_categoria["Codigo"]."'>".$exibe_categoria["Descicao"]."</option></p>";
                 }
