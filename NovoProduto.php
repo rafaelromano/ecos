@@ -86,7 +86,7 @@
             }
             else
             { 
-                $banco1 = mysqli_query($conn, "SELECT Codido,Descricao FROM Produtores"); 
+                $banco1 = mysqli_query($conn, "SELECT * FROM Produtores"); 
                 $total = mysqli_num_rows($banco1); 
                 echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option>Selecione...</option>";
                 while($exibe_produtores = mysqli_fetch_array($banco1)) { 
@@ -94,7 +94,7 @@
                 }
                 echo "</select>";
 
-                $banco2 = mysqli_query($conn, "SELECT Codido,Descricao FROM Produtores"); 
+                $banco2 = mysqli_query($conn, "SELECT * FROM Grupos-Produtores"); 
                 $total = mysqli_num_rows($banco2); 
                 echo "<p class='texto'><b>Código Produtor:</b><br><select name='cp-codigo'><option>Selecione...</option>";
                 while($exibe_categoria = mysqli_fetch_array($banco2)) { 
