@@ -89,17 +89,17 @@
             { 
                 $banco1 = mysqli_query($conn, "SELECT * FROM Produtores"); 
                 $total = mysqli_num_rows($banco1); 
-                echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option>Selecione...</option>";
+                echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
                 while($exibe_produtores = mysqli_fetch_array($banco1)) { 
-                    echo "<option value='".$exibe_produtores["Codigo"].">".$exibe_produtores["Descicao"]."</option></p>";
+                    echo "<option value='".$exibe_produtores["Codigo"]."'>".$exibe_produtores["Descicao"]."</option></p>";
                 }
                 echo "</select>";
 
                 $banco2 = mysqli_query($conn, "SELECT * FROM Grupos-Produtores"); 
                 $total = mysqli_num_rows($banco2); 
-                echo "<p class='texto'><b>Código Produtor:</b><br><select name='cp-codigo'><option>Selecione...</option>";
+                echo "<p class='texto'><b>Código Produtor:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
                 while($exibe_categoria = mysqli_fetch_array($banco2)) { 
-                    echo "<option value='".$exibe_categoria["Codigo"].">".$exibe_categoria["Descicao"]."</option></p>";
+                    echo "<option value='".$exibe_categoria["Codigo"]."'>".$exibe_categoria["Descicao"]."</option></p>";
                 }
                 echo "</select>";
                 echo "<p class='texto'><b>Descição:</b><br><input type='text' class='texto' size='20'  maxlength='200' name='descricao'></p>";
