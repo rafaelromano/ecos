@@ -65,10 +65,37 @@
                               
                 $banco = mysqli_query($conn, "SELECT * FROM Produtos WHERE Codigo='".$CODIGO."'"); 
                 $total = mysqli_num_rows($banco); 
-                while($exibe_ciclos = mysqli_fetch_array($banco)) { 
+                while($exibe_produtos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_produtos["Codigo"]."'>".$exibe_produtos["Codigo"]."</p>";
-                    echo "<p class='texto'><b>Código Produtor:</b><br><input type='text' class='texto' size='10' maxlength='10' name='pt-codigo' value='".$exibe_produtos["PT-Codigo"]."'></p>";
-                    echo "<p class='texto'><b>Código Categoria:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='cp-codigo' value='".$exibe_produtos["CP-Codigo"]."'></p>";
+
+                    $banco1 = mysqli_query($conn, "SELECT * FROM Produtores WHERE Codigo='$exibe_produtos["PT-Codigo"]'"); 
+                    $ptcodigo= mysqli_result($banco1);
+
+                    $banco1 = mysqli_query($conn, "SELECT * FROM Produtores"); 
+                    echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
+                    while($exibe_produtores = mysqli_fetch_array($banco1)) {
+                        if($exibe_produtos["PT-Codigo"] == $ptcodigo)
+                            {
+                            $selecao1="checked";
+                            }
+                        echo "<option value='".$exibe_produtores["Codigo"]."'>".$exibe_produtores["Codigo"]." - ".$exibe_produtores["Nome"]."</option></p>";
+                    }
+                    echo "</select>";
+
+                    $banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos` WHERE Codigo='$exibe_produtos["CP-Codigo"]'"); 
+                    $cpcodigo= mysqli_result($banco2);
+
+                    $banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos`"); 
+                    
+                    echo "<p class='texto'><b>Categoria:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
+                    while($exibe_categoria = mysqli_fetch_array($banco2)) { 
+                        if($exibe_produtos["CP-Codigo"] == $ptcodigo)
+                            {
+                            $selecao1="checked";
+                            }
+                        echo "<option value='".$exibe_categoria["Codigo"]."'>".$exibe_categoria["Codigo"]." - ".$exibe_categoria["Descricao"]."</option></p>";
+                    }
+
                     echo "<p class='texto'><b>Descição:</b><br><input type='date' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_produtos["Descricao"]."'></p>";
                     echo "<p class='texto'><b>Quantidade Disponível:</b><br><input type='text' class='texto' size='5'  maxlength='10' name='qtd-disponivel' value='".$exibe_produtos["Qtd-Disponivel"]."'></p>";
                     echo "<p class='texto'><b>Preço: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='preco' value='".$exibe_produtos["Custo"]."'></p>";
