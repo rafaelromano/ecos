@@ -96,7 +96,7 @@
                 echo "</select>";
 
                 $banco2 = mysqli_query($conn, "SELECT * FROM Categoria-Produtos"); 
-                //$total = mysqli_num_rows($banco2); 
+                $total = mysqli_num_rows($banco2); echo $total;
                 echo "<p class='texto'><b>Categoria:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
                 while($exibe_categoria = mysqli_fetch_array($banco2)) { 
                     echo "<option value='".$exibe_categoria["Codigo"]."'>".$exibe_categoria["Codigo"]." - ".$exibe_categoria["Descicao"]."</option></p>";
