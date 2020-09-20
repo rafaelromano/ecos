@@ -31,7 +31,7 @@
             include "conexao.php";
             
             mysqli_query($conn,"INSERT INTO `Produtos` (`Codigo`, `PT-Codigo`, `CP-Codigo`, `Descricao`,
-            `Custo`, `Preco`, `Disponibilidade`,) VALUES 
+            `Custo`, `Preco`, `Disponibilidade`) VALUES 
             (NULL,'$ptcodigo','$cpcodigo','$descricao','$custo','$preco','$disponibilidade')");
             
             mysqli_close($conn);
