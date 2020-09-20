@@ -19,7 +19,7 @@
             include "conexao.php";
             $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1; 
 
-            $banco = mysqli_query($conn, "SELECT * FROM Produtos WHERE Situacao='1'"); 
+            $banco = mysqli_query($conn, "SELECT * FROM Produtos WHERE Disponibilidade='1'"); 
 
             $total = mysqli_num_rows($banco); 
 
@@ -30,7 +30,7 @@
             $inicio = ($registros*$pagina)-$registros; 
             //echo $inicio;
             //echo $registros;
-            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' ORDER BY 'Codigo' ASC LIMIT $inicio,$registros"); 
+            $banco = mysqli_query($conn, "SELECT * FROM Produtos WHERE Disponibilidade='1' ORDER BY 'Codigo' ASC LIMIT $inicio,$registros"); 
             $total = mysqli_num_rows($banco); 
 
             while($exibe_produtos = mysqli_fetch_array($banco)) { 
