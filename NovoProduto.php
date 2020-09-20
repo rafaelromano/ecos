@@ -96,7 +96,7 @@
                         echo "<option value='".$exibe_categoria["Codigo"]."'>".$exibe_categoria["Codigo"]." - ".$exibe_categoria["Descricao"]."</option></p>";
                     }
 
-                    echo "<p class='texto'><b>Descição:</b><br><input type='date' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_produtos["Descricao"]."'></p>";
+                    echo "<p class='texto'><b>Descrição:</b><br><input type='date' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_produtos["Descricao"]."'></p>";
                     echo "<p class='texto'><b>Quantidade Disponível:</b><br><input type='text' class='texto' size='5'  maxlength='10' name='qtd-disponivel' value='".$exibe_produtos["Qtd-Disponivel"]."'></p>";
                     echo "<p class='texto'><b>Preço: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='preco' value='".$exibe_produtos["Custo"]."'></p>";
                     echo "<p class='texto'><b>:</b><br><input type='time' class='texto' size='5'  maxlength='10' name='preco' value='".$exibe_produtos["Preco"]."'></p>";
@@ -129,7 +129,7 @@
                     echo "<option value='".$exibe_categoria["Codigo"]."'>".$exibe_categoria["Codigo"]." - ".$exibe_categoria["Descricao"]."</option></p>";
                 }
                 echo "</select>";
-                echo "<p class='texto'><b>Descição:</b><br><input type='text' class='texto' size='20'  maxlength='200' name='descricao'></p>";
+                echo "<p class='texto'><b>Descrição:</b><br><input type='text' class='texto' size='20'  maxlength='200' name='descricao'></p>";
                 echo "<p class='texto'><b>Quantidade Disponível:</b><br><input type='text' class='texto' size='5'  maxlength='10' name='qtd-disponivel'></p>";
                 echo "<p class='texto'><b>Custo: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='custo'></p>";
                 echo "<p class='texto'><b>Preço: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='preco'></p>";             
