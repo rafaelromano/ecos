@@ -34,11 +34,11 @@
             $total = mysqli_num_rows($banco); 
 
             while($exibe_produtos = mysqli_fetch_array($banco)) { 
-                echo "<p class='texto'><b>Código:"; 
+                /*echo "<p class='texto'><b>Código:"; 
                 ?>
                 <a href="NovoProduto.php?codigo=<?php echo $exibe_produtos["Codigo"]; ?>">
-                <?php
-    /*            echo "</b>" . $exibe_produtos["Codigo"]."</a></p>";
+                <?php*/
+                echo "</b>" . $exibe_produtos["Codigo"]."</a></p>";
                 echo "<p class='texto'><b> - Código Produtor:</b> ".$exibe_produtos["PT-Codigo"]."</p>";
                 echo "<p class='texto'><b> - Código Categoria: </b>".$exibe_produtos["CP-Codigo"]."</p><br>";
                 echo "<p class='texto'><b> - Descição:</b> ".$exibe_produtos["Descicrao"]."</p>";
@@ -56,7 +56,7 @@
                     
                     echo "<p class='texto'><b>Disponibilidade:</b>".$selecao."</p>";      
                     } 
-            } */
+            } 
             ?>
             <br>
         </td>
