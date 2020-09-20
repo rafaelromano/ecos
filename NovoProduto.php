@@ -91,7 +91,7 @@
                 $total = mysqli_num_rows($banco1); 
                 echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
                 while($exibe_produtores = mysqli_fetch_array($banco1)) { 
-                    echo "<option value='".$exibe_produtores["Codigo"]."'>".$exibe_produtores["Nome"]."</option></p>";
+                    echo "<option value='".$exibe_produtores["Codigo"]."'>".$exibe_produtores["Codigo"]." - ".$exibe_produtores["Nome"]."</option></p>";
                 }
                 echo "</select>";
 
