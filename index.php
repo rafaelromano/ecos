@@ -30,10 +30,10 @@
             $inicio = ($registros*$pagina)-$registros; 
             echo $inicio;
             echo $registros;
-            $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' ORDER BY 'Data-inicio-geral' ASC LIMIT $inicio,$registros"); 
-            $total = mysqli_num_rows($banco); 
+            $banco1 = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' ORDER BY 'Data-inicio-geral' ASC LIMIT $inicio,$registros"); 
+            $total = mysqli_num_rows($banco1); 
 
-            while($exibe_ciclos = mysqli_fetch_array($banco)) { 
+            while($exibe_ciclos = mysqli_fetch_array($banco1)) { 
                 echo "<p class='texto'><b>Ciclo:"; 
                 ?>
                 <a href="NovoCiclo.php?codigo=<?php echo $exibe_ciclos["Codigo"]; ?>">
