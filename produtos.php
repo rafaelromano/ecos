@@ -54,7 +54,7 @@
                         $selecao="NÃO";
                         }
                     
-                    echo "<p class='texto'><b>Disponibilidade:</b>".$selecao."</p>";      
+                    echo "<p class='texto2'><b>Disponibilidade:</b>".$selecao."</p>";      
             } 
             ?>
             <br>
