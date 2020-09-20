@@ -3,7 +3,7 @@
 <head>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Ciclos</title>
-        <meta http-equiv="refresh" content="3;url=index.php" />
+        <meta http-equiv="refresh" content="3;url=produtos.php" />
 </head>
 <body>
 <center>
