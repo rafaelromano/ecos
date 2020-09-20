@@ -34,17 +34,17 @@
             $total = mysqli_num_rows($banco); 
 
             while($exibe_produtos = mysqli_fetch_array($banco)) { 
-                echo "<p class='texto'><b>Código:"; 
+                echo "<p class='texto'><b>Código Produto:"; 
                 ?>
                 <a href="NovoProduto.php?codigo=<?php echo $exibe_produtos["Codigo"]; ?>">
                 <?php
                 echo "</b>" . $exibe_produtos["Codigo"]."</a></p>";
-                echo "<p class='texto'><b> - Código Produtor:</b> ".$exibe_produtos["PT-Codigo"]."</p>";
-                echo "<p class='texto'><b> - Código Categoria: </b>".$exibe_produtos["CP-Codigo"]."</p><br>";
-                echo "<p class='texto'><b> - Descição:</b> ".$exibe_produtos["Descicrao"]."</p>";
-                echo "<p class='texto'><b> - Quantidade Disponivel: </b>".$exibe_produtos["Qtd-Disponivel"]."</p><br>";
-                echo "<p class='texto'><b> - Custo: R$</b>".$exibe_produtos["Custo"]."</p><br>";
-                echo "<p class='texto'><b> - Preço: R$</b>".$exibe_produtos["Preco"]."</p><br>";
+                echo "<p class='texto2'><b> Código Produtor:</b> ".$exibe_produtos["PT-Codigo"]."</p>";
+                echo "<p class='texto2'><b> Código Categoria: </b>".$exibe_produtos["CP-Codigo"]."</p>";
+                echo "<p class='texto2'><b> Descição:</b> ".$exibe_produtos["Descicrao"]."</p>";
+                echo "<p class='texto2'><b> Quantidade Disponivel: </b>".$exibe_produtos["Qtd-Disponivel"]."</p>";
+                echo "<p class='texto2'><b> Custo: R$</b>".$exibe_produtos["Custo"]."</p>";
+                echo "<p class='texto2'><b> Preço: R$</b>".$exibe_produtos["Preco"]."</p>";
                 if($exibe_produtos["Disponibilidade"] == 1)
                         {
                         $selecao="SIM";
