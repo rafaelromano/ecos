@@ -46,6 +46,7 @@
         <td class='td01'>
             <p class='titulo'>NOVO PRODUTO</p>
             <?php
+            include "conexao.php";
             $CODIGO = $_GET['codigo'];
             if($CODIGO<>"")
                 {
@@ -61,7 +62,7 @@
                 }
             if($CODIGO<>"")
             {
-                include "conexao.php";              
+                              
                 $banco = mysqli_query($conn, "SELECT * FROM Produtos WHERE Codigo='".$CODIGO."'"); 
                 $total = mysqli_num_rows($banco); 
                 while($exibe_ciclos = mysqli_fetch_array($banco)) { 
