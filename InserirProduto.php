@@ -21,6 +21,7 @@
             //echo $cpcodigo."<br>";
             $descricao = $_POST['descricao'];
             //echo $descricao."<br>";
+            $qtddisponivel = $_POST["qtd-disponivel"];
             $custo = $_POST['custo'];
             //echo $custo."<br>";
             $preco = $_POST['preco'];
@@ -30,8 +31,8 @@
            
             include "conexao.php";
             
-            mysqli_query($conn,"INSERT INTO `Produtos` (`Codigo`, `PT-Codigo`, `CP-Codigo`, `Descricao`, `Custo`, `Preco`, `Disponibilidade`) VALUES 
-            (NULL,'$ptcodigo','$cpcodigo','$descricao','$custo','$preco','$disponibilidade')");
+            mysqli_query($conn,"INSERT INTO `Produtos` (`Codigo`, `PT-Codigo`, `CP-Codigo`, `Descricao`, `Qtd-Disponivel`, `Custo`, `Preco`, `Disponibilidade`) VALUES 
+            (NULL,'$ptcodigo','$cpcodigo','$descricao','$qtddisponivel','$custo','$preco','$disponibilidade')");
             
             mysqli_close($conn);
             ?>
