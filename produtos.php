@@ -33,7 +33,7 @@
             $banco = mysqli_query($conn, "SELECT * FROM Ciclos WHERE Situacao='1' ORDER BY 'Codigo' ASC LIMIT $inicio,$registros"); 
             $total = mysqli_num_rows($banco); 
 
-            while($exibe_produtos = mysqli_fetch_array($banco)) { 
+/*            while($exibe_produtos = mysqli_fetch_array($banco)) { 
                 echo "<p class='texto'><b>Código:"; 
                 ?>
                 <a href="NovoProduto.php?codigo=<?php echo $exibe_produtos["Codigo"]; ?>">
@@ -56,7 +56,7 @@
                     
                     echo "<p class='texto'><b>Disponibilidade:</b>".$selecao."</p>";      
                     } 
-            } 
+            } */
             ?>
             <br>
         </td>
