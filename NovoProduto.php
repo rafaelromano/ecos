@@ -99,10 +99,10 @@
                         echo "<option value='".$exibe_categoria["Codigo"]." ".$selecao2."'>".$exibe_categoria["Codigo"]." - ".$exibe_categoria["Descricao"]."</option></p>";
                     }*/
 
-                    echo "<p class='texto'><b>Descrição:</b><br><input type='date' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_produtos["Descricao"]."'></p>";
+                    echo "<p class='texto'><b>Descrição:</b><br><input type='text' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_produtos["Descricao"]."'></p>";
                     echo "<p class='texto'><b>Quantidade Disponível:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='qtd-disponivel' value='".$exibe_produtos["Qtd-Disponivel"]."'></p>";
-                    echo "<p class='texto'><b>Preço: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='preco' value='".$exibe_produtos["Custo"]."'></p>*** Usar . para para centavos";
-                    echo "<p class='texto'><b>:</b><br><input type='time' class='texto' size='5'  maxlength='10' name='preco' value='".$exibe_produtos["Preco"]."'></p>*** Usar . para para centavos";
+                    eecho "<p class='texto'><b>Custo: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='custo' value='".$exibe_produtos["Custo"]."'></p>*** Usar . para para centavos";
+                    echo "<p class='texto'><b>Preço: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='preco' value='".$exibe_produtos["Preco"]."'></p>*** Usar . para para centavos";
                     if($exibe_produtos["Disponibilidade"] == 1)
                         {
                         $selecao1="checked";
