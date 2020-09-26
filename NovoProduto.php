@@ -65,7 +65,7 @@
                               
                 $banco = mysqli_query($conn, "SELECT * FROM Produtos WHERE Codigo='".$CODIGO."'"); 
                 $total = mysqli_num_rows($banco); 
-                //echo $total;
+                
                 while($exibe_produtos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_produtos["Codigo"]."'>".$exibe_produtos["Codigo"]."</p>";
                     
@@ -80,7 +80,7 @@
                         echo "<option value='".$exibe_produtores["Codigo"]."' ".$selecao1.">".$exibe_produtores["Codigo"]." - ".$exibe_produtores["Nome"]."</option></p>";
                     }
                     echo "</select>";
-
+echo $exibe_produtos["CP-Codigo"];
                     $banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos`"); 
                     echo "<p class='texto'><b>Categoria:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
                     while($exibe_categoria = mysqli_fetch_array($banco2)) { 
