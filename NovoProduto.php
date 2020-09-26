@@ -91,6 +91,7 @@
                             }
                         echo "<option value='".$exibe_categoria["Codigo"]."' ".$selecao2.">".$exibe_categoria["Codigo"]." - ".$exibe_categoria["Descricao"]."</option></p>";
                     }
+                    echo "</select>";
 
                     echo "<p class='texto'><b>Descrição:</b><br><input type='text' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_produtos["Descricao"]."'></p>";
                     echo "<p class='texto'><b>Quantidade Disponível:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='qtd-disponivel' value='".$exibe_produtos["Qtd-Disponivel"]."'></p>";
