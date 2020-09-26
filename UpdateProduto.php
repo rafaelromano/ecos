@@ -16,6 +16,7 @@
             <br>
             <p class='titulo'>CADASTRO ATUALIZADO</p>
             <?php
+            $CODIGO = $_POST['codigo'];
             $ptcodigo = $_POST['pt-codigo'];
             echo $ptcodigo."<br>";
             $cpcodigo = $_POST['cp-codigo'];
