@@ -3,7 +3,7 @@
 <head>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Ciclos</title>
-        <meta http-equiv="refresh" content="3;url=index.php" />
+        <meta http-equiv="refresh" content="3;url=produtos.php" />
         
 
 </head>
@@ -17,21 +17,21 @@
             <p class='titulo'>CADASTRO ATUALIZADO</p>
             <?php
             $ptcodigo = $_POST['pt-codigo'];
-            //echo $ptcodigo."<br>";
+            echo $ptcodigo."<br>";
             $cpcodigo = $_POST['cp-codigo'];
-            //echo $cpcodigo."<br>";
+            echo $cpcodigo."<br>";
             $descricao = $_POST['descricao'];
-            //echo $descricao."<br>";
+            echo $descricao."<br>";
             $qtddisponivel = $_POST["qtd-disponivel"];
             $custo = $_POST['custo'];
-            //echo $custo."<br>";
+            echo $custo."<br>";
             $preco = $_POST['preco'];
-            //echo $preco."<br>";
+            echo $preco."<br>";
             $disponibilidade = $_POST['disponibilidade'];
-            
+            echo $disponibilidade;
             include "conexao.php";
             
-            mysqli_query($conn, "UPDATE `Produtos` SET `PT-Codigo`='$ptcodigo', `CP-Codigo`='$cpcodigo',
+            //mysqli_query($conn, "UPDATE `Produtos` SET `PT-Codigo`='$ptcodigo', `CP-Codigo`='$cpcodigo',
             `Descricao`='$descricao', `Qtd-Disponivel`='$qtddisponivel', `Custo`='$custo',
             `Preco`='$preco', `Disponibilidade`='$disponibilidade', WHERE `Codigo`='$CODIGO'");
                         
