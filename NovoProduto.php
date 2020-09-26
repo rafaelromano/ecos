@@ -69,7 +69,7 @@
                 while($exibe_produtos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_produtos["Codigo"]."'>".$exibe_produtos["Codigo"]."</p>";
 
-                    $banco1 = mysqli_query($conn, "SELECT * FROM Produtores WHERE Codigo='$exibe_produtos["PT-Codigo"]'"); 
+                   /* $banco1 = mysqli_query($conn, "SELECT * FROM Produtores WHERE Codigo='$exibe_produtos["PT-Codigo"]'"); 
                     $ptcodigo= mysqli_result($banco1);
 
                     $banco1 = mysqli_query($conn, "SELECT * FROM Produtores"); 
@@ -82,9 +82,9 @@
                             }
                         echo "<option value='".$exibe_produtores["Codigo"]." ".$selecao1."'>".$exibe_produtores["Codigo"]." - ".$exibe_produtores["Nome"]."</option></p>";
                     }
-                    echo "</select>";
+                    echo "</select>";*/
 
-                    $banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos` WHERE Codigo='$exibe_produtos["CP-Codigo"]'"); 
+                  /*  $banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos` WHERE Codigo='$exibe_produtos["CP-Codigo"]'"); 
                     $cpcodigo= mysqli_result($banco2);
 
                     $banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos`"); 
@@ -97,7 +97,7 @@
                             $selecao2="selected";
                             }
                         echo "<option value='".$exibe_categoria["Codigo"]." ".$selecao2."'>".$exibe_categoria["Codigo"]." - ".$exibe_categoria["Descricao"]."</option></p>";
-                    }
+                    }*/
 
                     echo "<p class='texto'><b>Descrição:</b><br><input type='date' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_produtos["Descricao"]."'></p>";
                     echo "<p class='texto'><b>Quantidade Disponível:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='qtd-disponivel' value='".$exibe_produtos["Qtd-Disponivel"]."'></p>";
