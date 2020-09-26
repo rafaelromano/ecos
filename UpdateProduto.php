@@ -18,18 +18,13 @@
             <?php
             $CODIGO = $_POST['codigo'];
             $ptcodigo = $_POST['pt-codigo'];
-            echo $ptcodigo."<br>";
             $cpcodigo = $_POST['cp-codigo'];
-            echo $cpcodigo."<br>";
             $descricao = $_POST['descricao'];
-            echo $descricao."<br>";
             $qtddisponivel = $_POST["qtd-disponivel"];
             $custo = $_POST['custo'];
-            echo $custo."<br>";
             $preco = $_POST['preco'];
-            echo $preco."<br>";
             $disponibilidade = $_POST['disponibilidade'];
-            echo $disponibilidade;
+            
             include "conexao.php";
             
             mysqli_query($conn, "UPDATE `Produtos` SET 
