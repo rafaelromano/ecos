@@ -75,7 +75,7 @@
                     $banco1 = mysqli_query($conn, "SELECT * FROM Produtores"); 
                     echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
                     while($exibe_produtores = mysqli_fetch_array($banco1)) {
-                        $selecao1="";
+                        $selecao1=" ";
                         if($exibe_produtos["PT-Codigo"] == $ptcodigo)
                             {
                             $selecao1="selected";
@@ -91,7 +91,7 @@
                     
                     echo "<p class='texto'><b>Categoria:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
                     while($exibe_categoria = mysqli_fetch_array($banco2)) { 
-                        $selecao2="";
+                        $selecao2=" ";
                         if($exibe_produtos["CP-Codigo"] == $ptcodigo)
                             {
                             $selecao2="selected";
