@@ -31,9 +31,9 @@
             echo $disponibilidade;
             include "conexao.php";
             
-            //mysqli_query($conn, "UPDATE `Produtos` SET `PT-Codigo`='$ptcodigo', `CP-Codigo`='$cpcodigo',
+            /*mysqli_query($conn, "UPDATE `Produtos` SET `PT-Codigo`='$ptcodigo', `CP-Codigo`='$cpcodigo',
             `Descricao`='$descricao', `Qtd-Disponivel`='$qtddisponivel', `Custo`='$custo',
-            `Preco`='$preco', `Disponibilidade`='$disponibilidade', WHERE `Codigo`='$CODIGO'");
+            `Preco`='$preco', `Disponibilidade`='$disponibilidade', WHERE `Codigo`='$CODIGO'");*/
                         
              mysqli_close($conn);
             ?>
