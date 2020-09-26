@@ -65,11 +65,11 @@
                               
                 $banco = mysqli_query($conn, "SELECT * FROM Produtos WHERE Codigo='".$CODIGO."'"); 
                 $total = mysqli_num_rows($banco); 
-                echo $total;
+                //echo $total;
                 while($exibe_produtos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_produtos["Codigo"]."'>".$exibe_produtos["Codigo"]."</p>";
-
-                   // $banco1 = mysqli_query($conn, "SELECT * FROM Produtores WHERE Codigo='$exibe_produtos["PT-Codigo"]'"); 
+                    echo $exibe_produtos["PT-Codigo"];
+                    //$banco1 = mysqli_query($conn, "SELECT * FROM Produtores WHERE Codigo='$exibe_produtos["PT-Codigo"]'"); 
                     $ptcodigo= mysqli_result($banco1);
 
                     $banco1 = mysqli_query($conn, "SELECT * FROM Produtores"); 
