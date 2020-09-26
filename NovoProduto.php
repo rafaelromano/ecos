@@ -81,12 +81,11 @@
                     }
                     echo "</select>";
 
-                    /*$banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos`"); 
-                    
+                    $banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos`"); 
                     echo "<p class='texto'><b>Categoria:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
                     while($exibe_categoria = mysqli_fetch_array($banco2)) { 
                         $selecao2=" ";
-                        if($exibe_produtos["CP-Codigo"] == $ptcodigo)
+                        if($exibe_categoria == $exibe_produtos["CP-Codigo"])
                             {
                             $selecao2="selected";
                             }
