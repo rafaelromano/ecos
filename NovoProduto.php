@@ -68,15 +68,15 @@
                 //echo $total;
                 while($exibe_produtos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_produtos["Codigo"]."'>".$exibe_produtos["Codigo"]."</p>";
-                    echo $exibe_produtos["PT-Codigo"];
+                    $ptcodigo=$exibe_produtos["PT-Codigo"];
                     //$banco1 = mysqli_query($conn, "SELECT * FROM Produtores WHERE Codigo='$exibe_produtos["PT-Codigo"]'"); 
-                    $ptcodigo= mysqli_result($banco1);
+                    //$ptcodigo= mysqli_result($banco1);
 
                     $banco1 = mysqli_query($conn, "SELECT * FROM Produtores"); 
                     echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
                     while($exibe_produtores = mysqli_fetch_array($banco1)) {
                         $selecao1=" ";
-                        if($exibe_produtos["PT-Codigo"] == $ptcodigo)
+                        if($exibe_produtores["Codigo"] == $ptcodigo)
                             {
                             $selecao1="selected";
                             }
