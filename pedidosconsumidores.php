@@ -34,17 +34,19 @@
             $total = mysqli_num_rows($banco1); 
 
             while($exibe_pedidos = mysqli_fetch_array($banco1)) { 
-                echo "<p class='texto'><b>Ciclo:"; 
+                echo "<p class='texto'><b>Pedido:"; 
                 ?>
-                <a href="NovoCiclo.php?codigo=<?php echo $exibe_pedidos["Codigo"]; ?>">
-                <?php
-                echo "</b>" . $exibe_pedidos["Titulo-ciclo-aberto"]."</a></p>";
-                $datainiciogeral= strtotime($exibe_pedidos["Data-inicio-geral"]);
+                <a href="NovoPedidoConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?></b> <?php echo $exibe_pedidos["Codigo"];."</a>"
+                
+                $query = mysqli_query($conn, "SELECT * FROM Consumidores WHERE Codigo=$exibe_pedidos["CI-Codigo"]"); 
+                $consumidor= mysqli_result($query, 0, "Nome");
+                echo "<b>Consumidor: </b>".$consumidor."</p>";
+                /*$datainiciogeral= strtotime($exibe_pedidos["Data-inicio-geral"]);
                 $datainiciogeral=date("d-m-Y",$datainiciogeral);
                 echo "<p class='texto'><b> - Data Inicial:</b> ".$datainiciogeral."</p>";
                 $datafinalgeral= strtotime($exibe_pedidos["Data-fim-geral"]);
                 $datafinalgeral=date("d-m-Y",$datafinalgeral);
-                echo "<p class='texto'><b> - Data Final: </b>".$datafinalgeral."</p><br>";
+                echo "<p class='texto'><b> - Data Final: </b>".$datafinalgeral."</p><br>";*/
                 //echo "<p class='texto'><b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
                 //echo "<p class='texto'><b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br>";
             } 
