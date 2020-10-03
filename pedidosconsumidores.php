@@ -37,8 +37,8 @@
                 echo "<p class='texto'><b>Pedido:"; 
                 ?>
                 <a href="NovoPedidoConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?></b> <?php echo $exibe_pedidos["Codigo"]."</a>";
-                
-                $query = mysqli_query($conn, "SELECT * FROM Consumidores WHERE Codigo=$exibe_pedidos["CI-Codigo"]"); 
+                $codigo = $exibe_pedidos["CI-Codigo"];
+                $query = mysqli_query($conn, "SELECT * FROM Consumidores WHERE Codigo=$codigo"); 
                 /*$consumidor= mysqli_result($query, 0, 3);
                 echo "<b>Consumidor: </b>".$consumidor."</p>";*/
                 /*$datainiciogeral= strtotime($exibe_pedidos["Data-inicio-geral"]);
