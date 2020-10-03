@@ -36,11 +36,11 @@
             while($exibe_pedidos = mysqli_fetch_array($banco1)) { 
                 echo "<p class='texto'><b>Pedido:"; 
                 ?>
-                <a href="NovoPedidoConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?><?php echo $exibe_pedidos["Codigo"]."</a></b> ";
+                <a href="NovoPedidoConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?><?php echo $exibe_pedidos["Codigo"]."</a></b></p> ";
                 $codigo = $exibe_pedidos["CI-Codigo"];
                 $query = mysqli_query($conn, "SELECT * FROM Consumidores WHERE Codigo=$codigo"); 
                 $consumidor= mysqli_result($query, 0, "Nome");
-                echo "<b>Consumidor: </b>".$consumidor."</p>";
+                echo "<p class='texto'><b>Consumidor: </b>".$consumidor."</p>";
                 /*$datainiciogeral= strtotime($exibe_pedidos["Data-inicio-geral"]);
                 $datainiciogeral=date("d-m-Y",$datainiciogeral);
                 echo "<p class='texto'><b> - Data Inicial:</b> ".$datainiciogeral."</p>";
