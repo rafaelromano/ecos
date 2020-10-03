@@ -39,7 +39,7 @@
                 <a href="NovoPedidoConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?></b> <?php echo $exibe_pedidos["Codigo"]."</a>";
                 $codigo = $exibe_pedidos["CI-Codigo"];
                 $query = mysqli_query($conn, "SELECT * FROM Consumidores WHERE Codigo=$codigo"); 
-                $consumidor= mysqli_result($query, 0, 3);
+                $consumidor= mysqli_result($query, 0, "Nome");
                 echo "<b>Consumidor: </b>".$consumidor."</p>";
                 /*$datainiciogeral= strtotime($exibe_pedidos["Data-inicio-geral"]);
                 $datainiciogeral=date("d-m-Y",$datainiciogeral);
