@@ -22,7 +22,7 @@
             $banco = mysqli_query($conn, "SELECT * FROM `Pedidos-Consumidores-Header` WHERE Situacao='1'"); 
 
             $total = mysqli_num_rows($banco); 
-            echo $total;
+            //echo $total;
             $registros = 5;
 
             $numPaginas = ceil($total/$registros);
@@ -30,7 +30,7 @@
             $inicio = ($registros*$pagina)-$registros; 
             //echo $inicio;
             //echo $registros;
-            $banco1 = mysqli_query($conn, "SELECT * FROM `Pedidos-Consumidores-Header` WHERE Situacao='1' ASC LIMIT $inicio,$registros"); 
+            $banco1 = mysqli_query($conn, "SELECT * FROM `Pedidos-Consumidores-Header` WHERE Situacao='1' LIMIT $inicio,$registros"); 
             $total = mysqli_num_rows($banco1); 
 
             while($exibe_pedidos = mysqli_fetch_array($banco1)) { 
