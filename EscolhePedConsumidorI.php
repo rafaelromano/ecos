@@ -44,22 +44,40 @@
 <table class='table'>
     <tr>
         <td class='td01'>
-            <p class='titulo'>NOVO PEDIDO CONSUMIDOR</p>
+            <p class='titulo'>NOVO PEDIDO DE ITENS DO CONSUMIDOR</p>
+
+            
             <?php
             include "conexao.php";
             $CODIGO = $_GET['codigo'];
-            if($CODIGO<>"")
-                {
-                ?>
-                <form method="post" action="UpdatePedConsumidorI.php" name="formulario">
-                <?php
-                }
-            else
-                {
-                ?>
-                <form method="post" action="EscolhePedConsumidorI.php" name="formulario">
-                <?php
-                }
+            $cicodigo = $_POST['ci-codigo'];
+            //echo $ptcodigo."<br>";
+            $cocodigo = $_POST['co-codigo'];
+            //echo $cpcodigo."<br>";
+            $obsconsumidor = $_POST['obs-consumidor'];
+            //echo $descricao."<br>";
+            $formapagamento = $_POST["forma-pagamento"];
+            $tipoentrega = $_POST['tipo-entrega'];
+            //echo $custo."<br>";
+            $situacao = $_POST['Situacao'];
+            //echo $preco."<br>";
+            $pendencia = $_POST['pendencia'];
+            
+            include "conexao.php";
+            
+            mysqli_query($conn, "UPDATE `Pedidos-Consumidores-Header` SET 
+            `CI-Codigo`='$cicodigo', 
+            `CO-Codigo`='$cocodigo',
+            `OBS-Consumidor`='$obsconsumidor',
+            `Forma-Pagamento`='$formapagamento',
+            `Tipo-Entrega`='$tipoentrega',
+            `Situacao`='$situacao',
+            `Descricao-Pendencia`='$pendencia'
+             WHERE `Codigo`='$CODIGO'");
+
+           /* ?>
+                <form method="post" action="InserirPedConsumidorI.php" name="formulario">
+            <?php 
             if($CODIGO<>"")
             {
                               
@@ -148,7 +166,6 @@
             }
             else
             { 
-                
                 $banco2 = mysqli_query($conn, "SELECT * FROM `Ciclos`"); 
                 echo "<p class='texto2'><b> - Ciclo:</b><br><select name='ci-codigo'><option value='0'>Selecione...</option>";
                 while($exibe_ciclo = mysqli_fetch_array($banco2)) {
@@ -191,14 +208,14 @@
                 <?php
                 if($CODIGO<>"")
                 {
-                    echo "<input type='submit' class='button3' value='ATUALIZAR' onclick='return validar()'></form>";
+                    echo "<input type='submit' class='button3' value='ESCOLHER PRODUTOS' onclick='return validar()'></form>";
                 }
                 else
                 {
-                    echo "<input type='submit' class='button3' value='CADASTRAR' onclick='return validar()'></form>";
+                    echo "<input type='submit' class='button3' value='ESCOLHER PRODUTOS' onclick='return validar()'></form>";
                 }
                 echo "&nbsp;&nbsp;&nbsp;<a href='pedidosconsumidores.php'><button class='button3'>CANCELAR</button></a>";
-                
+               */ 
                 mysqli_close($conn);
                 ?>
             </td>
