@@ -37,12 +37,12 @@
                 echo "<p class='texto'><b>Pedido:"; 
                 ?>
                 <a href="NovoPedidoConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?>"><?php echo $exibe_pedidos["Codigo"]."</a></b></p> ";
-                $codigo = $exibe_pedidos["CI-Codigo"];
+                $codigo = $exibe_pedidos["CO-Codigo"];
                 //echo $codigo;
                 $query = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
                 while($exibe_consumidor = mysqli_fetch_array($query)) { 
                     $exibe_consumidor = mysqli_fetch_array($query);
-                    echo $exibe_consumidor["None"];
+                    //echo $exibe_consumidor["None"];
                     $consumidor= $exibe_consumidor["None"];
                 }
                 
