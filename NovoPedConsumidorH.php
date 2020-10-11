@@ -96,7 +96,7 @@
                     }
                     echo "</select>";
                     */                    
-                    echo "<p class='texto2'><b> - OBS Consumidor:<br></b></p>":
+                    /*echo "<p class='texto2'><b> - OBS Consumidor:<br></b></p>":
                     echo "<input type='text' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_pedidos["OBS-Consumidor"].">";
                     if($exibe_pedidos["Forma-Pagamento"] == 1)
                             {
@@ -109,7 +109,7 @@
                         else
                             {
                             $selecao3="selected";
-                            }
+                            }*/
                     /*echo "<p class='texto2'><b>Forma de Pagamento:</b><br><select name='forma-pagamento'><option value='0'>Selecione...</option>";
                     echo "<option value='1' ".$selecao1.">1 - Cartão de Débito</option>";
                     echo "<option value='2' ".$selecao2.">2 - Cartão de Crédito</option>";
