@@ -97,7 +97,7 @@
                     echo "</select>";
                     
                     echo "<p class='texto2'><b> - OBS Consumidor:<br></b></p>":
-                    echo "<input type='text' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_pedidos["OBS-Consumidor"].">";
+                    echo "<input type='text' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_pedidos["OBS-Consumidor"]."'>";
                     /*if($exibe_pedidos["Forma-Pagamento"] == 1)
                             {
                             $selecao1="selected";
