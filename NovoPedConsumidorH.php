@@ -85,7 +85,7 @@
                 
                     $codigo = $exibe_pedidos["CO-Codigo"];
                     $banco3 = mysqli_query($conn, "SELECT * FROM `Consumidores`"); 
-                    echo "<p class='texto'><b>Ciclo:</b><br><select name='ci-codigo'><option value='0'>Selecione...</option>";
+                    echo "<p class='texto'><b>Ciclo:</b><br><select name='co-codigo'><option value='0'>Selecione...</option>";
                     while($exibe_consumidor = mysqli_fetch_array($banco3)) {
                         $selecao2=" ";
                         if($exibe_pedidos["CO-Codigo"] == $exibe_consumidor["Codigo"])
@@ -97,7 +97,7 @@
                     echo "</select>";
                     
                     echo "<p class='texto2'><b> - OBS Consumidor:<br></b></p>";
-                    echo "<input type='text' class='texto' size='20'  maxlength='200' name='obs-consumidor' value='".$exibe_pedidos["OBS-Consumidor"]."'>";
+                    echo "<input type='text2' class='texto' size='20'  maxlength='200' name='obs-consumidor' value='".$exibe_pedidos["OBS-Consumidor"]."'>";
                     if($exibe_pedidos["Forma-Pagamento"] == 1)
                             {
                             $selecao1="selected";
@@ -141,32 +141,45 @@
                         $selecao8="checked";
                         }
                     echo "<p class='texto2'><b>Situação:</b><br><input type='radio' name='situacao' value='1' ".$selecao7.">Ativo - <input type='radio' name='situacao' value='0' ".$selecao8.">Inativo<br></p>"; 
-                    echo "<p class='texto2'><b> - Descrição de Pendência:<br></b> ".$exibe_pedidos["Descricao-Pendencia"]."</p>";
+                    echo "<p class='texto2'><b> - Descrição de Pendência:<br></b> ";
+                    echo "<input type='text2' class='texto' size='20'  maxlength='200' name='pendencia' value='".$exibe_pedidos["Descricao-Pendencia"]."'></p>";
                     
                     } 
             }
             else
             { 
-                $banco1 = mysqli_query($conn, "SELECT * FROM Produtores"); 
-                
-                echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
-                while($exibe_produtores = mysqli_fetch_array($banco1)) { 
-                    echo "<option value='".$exibe_produtores["Codigo"]."'>".$exibe_produtores["Codigo"]." - ".$exibe_produtores["Nome"]."</option></p>";
+                $banco2 = mysqli_query($conn, "SELECT * FROM `Ciclos`"); 
+                echo "<p class='texto2'><b>Ciclo:</b><br><select name='ci-codigo'><option value='0'>Selecione...</option>";
+                while($exibe_ciclo = mysqli_fetch_array($banco2)) {
+                    echo "<option value='".$exibe_ciclo["Codigo"]."' ".$selecao1.">".$exibe_ciclo["Codigo"]." - ".$exibe_ciclo["Titulo-ciclo-aberto"]."</option></p>";
                 }
                 echo "</select>";
-
-                $banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos`"); 
-                
-                echo "<p class='texto'><b>Categoria:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
-                while($exibe_categoria = mysqli_fetch_array($banco2)) { 
-                    echo "<option value='".$exibe_categoria["Codigo"]."'>".$exibe_categoria["Codigo"]." - ".$exibe_categoria["Descricao"]."</option></p>";
+            
+                $banco3 = mysqli_query($conn, "SELECT * FROM `Consumidores`"); 
+                echo "<p class='texto'><b>Ciclo:</b><br><select name='co-codigo'><option value='0'>Selecione...</option>";
+                while($exibe_consumidor = mysqli_fetch_array($banco3)) {
+                    echo "<option value='".$exibe_consumidor["Codigo"]."' ".$selecao2.">".$exibe_consumidor["Codigo"]." - ".$exibe_consumidor["Nome"]."</option></p>";
                 }
                 echo "</select>";
-                echo "<p class='texto'><b>Descrição:</b><br><input type='text' class='texto' size='20'  maxlength='200' name='descricao'></p>";
-                echo "<p class='texto'><b>Quantidade Disponível:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='qtd-disponivel'></p>";
-                echo "<p class='texto'><b>Custo: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='custo'></p>*** Usar . para para centavos";
-                echo "<p class='texto'><b>Preço: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='preco'></p>*** Usar . para para centavos";             
-                echo "<p class='texto'><b>Disponibilidade:</b><br><input type='radio' name='disponibilidade' value='1'>SIM - <input type='radio' name='disponibilidade' value='0'>NÃO<br></p>";      
+                
+                echo "<p class='texto2'><b> - OBS Consumidor:<br></b></p>";
+                echo "<input type='text2' class='texto' size='20'  maxlength='200' name='obs-consumidor'>";
+                echo "<p class='texto2'><b>Forma de Pagamento:</b><br><select name='forma-pagamento'><option value='0'>Selecione...</option>";
+                echo "<option value='1'>1 - Cartão de Débito</option>";
+                echo "<option value='2'>2 - Cartão de Crédito</option>";
+                echo "<option value='3'>3 - Uber</option>";
+                echo "</select>";        
+                
+                echo "<p class='texto2'><b>Tipo de Entrega:</b><br><select name='tipo-entrega'><option value='0'>Selecione...</option>";
+                echo "<option value='1'>1 - Consumidor retira mercadoria</option>";
+                echo "<option value='2'>2 - Produtor envia mercadoria</option>";
+                echo "<option value='3'>3 - Dinheiro</option>";        
+                echo "</select>";
+                
+                echo "<p class='texto2'><b>Situação:</b><br><input type='radio' name='situacao' value='1'>Ativo - <input type='radio' name='situacao' value='0'>Inativo<br></p>"; 
+                echo "<p class='texto2'><b> - Descrição de Pendência:<br></b> ";
+                echo "<input type='text2' class='texto' size='20'  maxlength='200' name='pendencia' ></p>";
+                         
             }
             ?>
         </td>
