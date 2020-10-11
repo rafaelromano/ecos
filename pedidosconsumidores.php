@@ -38,11 +38,11 @@
                 ?>
                 <a href="NovoPedidoConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?>"><?php echo $exibe_pedidos["Codigo"]."</a></b></p> ";
                 $codigo = $exibe_pedidos["CO-Codigo"];
-                echo $codigo;
+                //echo $codigo;
                 $banco2 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
                 while($exibe_consumidor = mysqli_fetch_array($banco2)) { 
-                    echo $exibe_consumidor["None"];
-                    //$consumidor= $exibe_consumidor["None"];
+                    //echo $exibe_consumidor["Nome"];
+                    $consumidor= $exibe_consumidor["None"];
                 }
                 
                 echo "<p class='texto'><b>Consumidor: </b>".$consumidor."</p>";
