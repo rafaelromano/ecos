@@ -69,7 +69,7 @@
                 while($exibe_pedidos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_pedidos["Codigo"]."'>".$exibe_pedidos["Codigo"]."</p>";
                     
-                /*    $codigo = $exibe_pedidos["CI-Codigo"];
+                    $codigo = $exibe_pedidos["CI-Codigo"];
                     $banco2 = mysqli_query($conn, "SELECT * FROM `Ciclos` WHERE Codigo='$codigo'"); 
                     echo "<p class='texto'><b>Ciclo:</b><br><select name='ci-codigo'><option value='0'>Selecione...</option>";
                     while($exibe_ciclo = mysqli_fetch_array($banco2)) {
@@ -82,7 +82,7 @@
                     }
                     echo "</select>";
 
-                  */        
+                
                   /*  $codigo = $exibe_pedidos["CO-Codigo"];
                     $banco3 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
                     echo "<p class='texto'><b>Ciclo:</b><br><select name='ci-codigo'><option value='0'>Selecione...</option>";
