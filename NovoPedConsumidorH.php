@@ -70,17 +70,34 @@
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_pedidos["Codigo"]."'>".$exibe_pedidos["Codigo"]."</p>";
                     
                     $codigo = $exibe_pedidos["CI-Codigo"];
-                    $banco3 = mysqli_query($conn, "SELECT * FROM `Ciclos` WHERE Codigo='$codigo'"); 
-                    while($exibe_ciclo = mysqli_fetch_array($banco3)) { 
-                        echo "<p class='texto2'><b>- Ciclo: </b>".$exibe_ciclo["Titulo-ciclo-aberto"]."</p>";
-                    }      
+                    $banco2 = mysqli_query($conn, "SELECT * FROM `Ciclos` WHERE Codigo='$codigo'"); 
+                    echo "<p class='texto'><b>Ciclo:</b><br><select name='ci-codigo'><option value='0'>Selecione...</option>";
+                    while($exibe_ciclo = mysqli_fetch_array($banco2)) {
+                        $selecao1=" ";
+                        if($exibe_pedidos["CI-Codigo"] == $exibe_ciclo["Codigo"])
+                            {
+                            $selecao1="selected";
+                            }
+                        echo "<option value='".$exibe_ciclo["Codigo"]."' ".$selecao1.">".$exibe_ciclo["Codigo"]." - ".$exibe_ciclo["Titulo-ciclo-aberto"]."</option></p>";
+                    }
+                    echo "</select>";
+
+                          
                     $codigo = $exibe_pedidos["CO-Codigo"];
-                    $banco2 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
-                    while($exibe_consumidor = mysqli_fetch_array($banco2)) { 
-                        echo "<p class='texto2'><b>- Consumidor: </b>".$exibe_consumidor["Nome"]."</p>";
-                    }      
-                    
-                    echo "<p class='texto2'><b> - OBS Consumidor:<br></b> ".$exibe_pedidos["OBS-Consumidor"]."</p>";
+                    $banco3 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
+                    echo "<p class='texto'><b>Ciclo:</b><br><select name='ci-codigo'><option value='0'>Selecione...</option>";
+                    while($exibe_consumidor = mysqli_fetch_array($banco3)) {
+                        $selecao2=" ";
+                        if($exibe_pedidos["CO-Codigo"] == $exibe_consumidor["Codigo"])
+                            {
+                            $selecao2="selected";
+                            }
+                        echo "<option value='".$exibe_consumidor["Codigo"]."' ".$selecao2.">".$exibe_consumidor["Codigo"]." - ".$exibe_consumidor["Nome"]."</option></p>";
+                    }
+                    echo "</select>";
+                                        
+                    echo "<p class='texto2'><b> - OBS Consumidor:<br></b></p>":
+                    echo "<input type='text' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_pedidos["OBS-Consumidor"].">";
                     if($exibe_pedidos["Forma-Pagamento"] == 1)
                             {
                             $selecao1="selected";
@@ -93,7 +110,7 @@
                             {
                             $selecao3="selected";
                             }
-                    echo "<p class='texto2'><b>Forma de Pagamento:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
+                    echo "<p class='texto2'><b>Forma de Pagamento:</b><br><select name='forma-pagamento'><option value='0'>Selecione...</option>";
                     echo "<option value='1' ".$selecao1.">1 - Cartão de Débito</option>";
                     echo "<option value='2' ".$selecao2.">2 - Cartão de Crédito</option>";
                     echo "<option value='3' ".$selecao3.">3 - Uber</option>";
@@ -110,7 +127,7 @@
                             {
                             $selecao6="selected";
                             }
-                    echo "<p class='texto2'><b>Tipo de Entrega:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
+                    echo "<p class='texto2'><b>Tipo de Entrega:</b><br><select name='tipo-entrega'><option value='0'>Selecione...</option>";
                     echo "<option value='1' ".$selecao4.">1 - Consumidor retira mercadoria</option>";
                     echo "<option value='2' ".$selecao5.">2 - Produtor envia mercadoria</option>";
                     echo "<option value='3' ".$selecao6.">3 - Dinheiro</option>";        
