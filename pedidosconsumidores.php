@@ -62,6 +62,19 @@
                         $selecao="Dinheiro";
                         }
                 echo "<p class='texto2'><b> - Forma de Pagamento:<br></b> ".$selecao."</p>";
+                if($exibe_pedidos["Tipo-Entrega"] == 1)
+                        {
+                        $selecao="Consumidor retira mercadoria";
+                        }
+                    elseif($exibe_pedidos["Forma-Pagamento"] == 2)
+                        {
+                        $selecao="Produtor envia mercadoria";
+                        }
+                    else
+                        {
+                        $selecao="Uber";
+                        }
+                echo "<p class='texto2'><b> - Tipo de Entrega:<br></b> ".$selecao."</p>";
             } 
             ?>
             <br>
