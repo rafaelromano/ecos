@@ -47,12 +47,11 @@
                 while($exibe_consumidor = mysqli_fetch_array($banco2)) { 
                     echo "<p class='texto2'><b>Consumidor: </b>".$exibe_consumidor["Nome"]."</p>";
                 }      
-                /*$datainiciogeral= strtotime($exibe_pedidos["Data-inicio-geral"]);
-                $datainiciogeral=date("d-m-Y",$datainiciogeral);
-                echo "<p class='texto'><b> - Data Inicial:</b> ".$datainiciogeral."</p>";
-                $datafinalgeral= strtotime($exibe_pedidos["Data-fim-geral"]);
-                $datafinalgeral=date("d-m-Y",$datafinalgeral);
-                echo "<p class='texto'><b> - Data Final: </b>".$datafinalgeral."</p><br>";*/
+                
+                echo "<p class='texto2'><b> - OBS Consumidor:<br></b> ".$exibe_consumidor["OBS-Consumidor"]."</p>";
+                //$datafinalgeral= strtotime($exibe_pedidos["Data-fim-geral"]);
+                //$datafinalgeral=date("d-m-Y",$datafinalgeral);
+                //echo "<p class='texto'><b> - Data Final: </b>".$datafinalgeral."</p><br>";*/
                 //echo "<p class='texto'><b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
                 //echo "<p class='texto'><b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br>";
             } 
