@@ -93,7 +93,7 @@
                             {
                             $selecao3="selected";
                             }
-                    echo "<p class='texto'><b>Forma de Pagamento:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
+                    echo "<p class='texto2'><b>Forma de Pagamento:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
                     echo "<select name='pt-codigo' ".$selecao1."><option value='1'>1 - Cartão de Débito</option>";
                     echo "<select name='pt-codigo' ".$selecao2."><option value='2'>2 - Cartão de Crédito</option>";
                     echo "<select name='pt-codigo' ".$selecao3."><option value='3'>3 - Uber</option>";
@@ -110,7 +110,7 @@
                             {
                             $selecao6="selected";
                             }
-                    echo "<p class='texto'><b>Tipo de Entrega:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
+                    echo "<p class='texto2'><b>Tipo de Entrega:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
                     echo "<select name='pt-codigo' ".$selecao4."><option value='1'>1 - Consumidor retira mercadoria</option>";
                     echo "<select name='pt-codigo' ".$selecao5."><option value='2'>2 - Produtor envia mercadoria</option>";
                     echo "<select nam='pt-codigo' ".$selecao6."><option value='3'>3 - Dinheiro</option>";        
@@ -123,7 +123,7 @@
                         {
                         $selecao8="checked";
                         }
-                    echo "<p class='texto'><b>Situação:</b><br><input type='radio' name='situacao' value='1' ".$selecao7.">Ativo - <input type='radio' name='situacao' value='0' ".$selecao8.">Inativo<br></p>";      
+                    echo "<p class='texto2'><b>Situação:</b><br><input type='radio' name='situacao' value='1' ".$selecao7.">Ativo - <input type='radio' name='situacao' value='0' ".$selecao8.">Inativo<br></p>";      
                     echo "<p class='texto2'><b> - Descrição de Pendência:<br></b> ".$exibe_pedidos["Descricao-Pendencia"]."</p>";
                     
                     } 
