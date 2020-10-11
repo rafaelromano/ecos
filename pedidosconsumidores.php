@@ -53,7 +53,7 @@
                         {
                         $selecao="Cartão de Débito";
                         }
-                    if else($exibe_pedidos["Forma-Pagamento"] == 2)
+                    elseif($exibe_pedidos["Forma-Pagamento"] == 2)
                         {
                         $selecao="Cartão de Crédito";
                         }
