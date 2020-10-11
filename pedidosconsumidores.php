@@ -41,6 +41,7 @@
                 //echo $codigo;
                 $query = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
                 $exibe_consumidor = mysqli_fetch_array($query);
+                echo $exibe_consumidor["None"];
                 $consumidor= $exibe_consumidor["None"];
                 echo "<p class='texto'><b>Consumidor: </b>".$consumidor."</p>";
                 /*$datainiciogeral= strtotime($exibe_pedidos["Data-inicio-geral"]);
