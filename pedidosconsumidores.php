@@ -37,11 +37,14 @@
                 echo "<p class='texto'><b>Pedido:"; 
                 ?>
                 <a href="NovoPedidoConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?>"><?php echo $exibe_pedidos["Codigo"]."</a></b></p> ";
+                $codigo = $exibe_pedidos["CI-Codigo"];
+                $banco3 = mysqli_query($conn, "SELECT * FROM `Ciclos` WHERE Codigo='$codigo'"); 
+                while($exibe_ciclo = mysqli_fetch_array($banco3)) { 
+                    echo "<p class='texto2'><b>Ciclo: </b>".$exibe_ciclo["Titulo-ciclo-aberto"]."</p>";
+                }      
                 $codigo = $exibe_pedidos["CO-Codigo"];
-                //echo $codigo;
                 $banco2 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
                 while($exibe_consumidor = mysqli_fetch_array($banco2)) { 
-                    //$consumidor= $exibe_consumidor["None"];
                     echo "<p class='texto2'><b>Consumidor: </b>".$exibe_consumidor["Nome"]."</p>";
                 }      
                 /*$datainiciogeral= strtotime($exibe_pedidos["Data-inicio-geral"]);
