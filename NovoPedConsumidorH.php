@@ -94,9 +94,9 @@
                             $selecao3="selected";
                             }
                     echo "<p class='texto2'><b>Forma de Pagamento:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
-                    echo "<select name='pt-codigo' ".$selecao1."><option value='1'>1 - Cartão de Débito</option>";
-                    echo "<select name='pt-codigo' ".$selecao2."><option value='2'>2 - Cartão de Crédito</option>";
-                    echo "<select name='pt-codigo' ".$selecao3."><option value='3'>3 - Uber</option>";
+                    echo "<option value='1' ".$selecao1.">1 - Cartão de Débito</option>";
+                    echo "<option value='2' ".$selecao2.">2 - Cartão de Crédito</option>";
+                    echo "<option value='3' ".$selecao3.">3 - Uber</option>";
                     echo "</select>";        
                     if($exibe_pedidos["Tipo-Entrega"] == 1)
                             {
@@ -111,9 +111,9 @@
                             $selecao6="selected";
                             }
                     echo "<p class='texto2'><b>Tipo de Entrega:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
-                    echo "<select name='pt-codigo' ".$selecao4."><option value='1'>1 - Consumidor retira mercadoria</option>";
-                    echo "<select name='pt-codigo' ".$selecao5."><option value='2'>2 - Produtor envia mercadoria</option>";
-                    echo "<select nam='pt-codigo' ".$selecao6."><option value='3'>3 - Dinheiro</option>";        
+                    echo "<option value='1' ".$selecao4.">1 - Consumidor retira mercadoria</option>";
+                    echo "<option value='2' ".$selecao5.">2 - Produtor envia mercadoria</option>";
+                    echo "<option value='3' ".$selecao6.">3 - Dinheiro</option>";        
                     echo "</select>";
                     if($exibe_pedidos["Situacao"] == 1)
                         {
