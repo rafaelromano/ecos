@@ -40,15 +40,15 @@
                 $codigo = $exibe_pedidos["CI-Codigo"];
                 $banco3 = mysqli_query($conn, "SELECT * FROM `Ciclos` WHERE Codigo='$codigo'"); 
                 while($exibe_ciclo = mysqli_fetch_array($banco3)) { 
-                    echo "<p class='texto2'><b>Ciclo: </b>".$exibe_ciclo["Titulo-ciclo-aberto"]."</p>";
+                    echo "<p class='texto2'><b>- Ciclo: </b>".$exibe_ciclo["Titulo-ciclo-aberto"]."</p>";
                 }      
                 $codigo = $exibe_pedidos["CO-Codigo"];
                 $banco2 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
                 while($exibe_consumidor = mysqli_fetch_array($banco2)) { 
-                    echo "<p class='texto2'><b>Consumidor: </b>".$exibe_consumidor["Nome"]."</p>";
+                    echo "<p class='texto2'><b>- Consumidor: </b>".$exibe_consumidor["Nome"]."</p>";
                 }      
                 
-                echo "<p class='texto2'><b> - OBS Consumidor:<br></b> ".$exibe_consumidor["OBS-Consumidor"]."</p>";
+                echo "<p class='texto2'><b> - OBS Consumidor:<br></b> ".$exibe_pedidos["OBS-Consumidor"]."</p>";
                 //$datafinalgeral= strtotime($exibe_pedidos["Data-fim-geral"]);
                 //$datafinalgeral=date("d-m-Y",$datafinalgeral);
                 //echo "<p class='texto'><b> - Data Final: </b>".$datafinalgeral."</p><br>";*/
