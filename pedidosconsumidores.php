@@ -12,7 +12,7 @@
     <tr>
         <td class='td01'>
             <p class='titulo'>PEDIDOS CONSUMIDORES</p>
-            <a href="NovoCiclo.php" class='subtitulo'>Novo Pedido</a>
+            <a href="NovoPedConsumidor.php" class='subtitulo'>Novo Pedido</a>
             <br>
             <br>
             <?php
