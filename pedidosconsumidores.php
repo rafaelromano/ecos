@@ -36,7 +36,7 @@
             while($exibe_pedidos = mysqli_fetch_array($banco1)) { 
                 echo "<p class='texto'><b>Pedido:"; 
                 ?>
-                <a href="NovoPedidoConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?>"><?php echo $exibe_pedidos["Codigo"]."</a></b></p> ";
+                <a href="NovoPedConsumidoresH.php?codigo=<?php echo $exibe_pedidos["Codigo"];?>"><?php echo $exibe_pedidos["Codigo"]."</a></b></p> ";
                 $codigo = $exibe_pedidos["CI-Codigo"];
                 $banco3 = mysqli_query($conn, "SELECT * FROM `Ciclos` WHERE Codigo='$codigo'"); 
                 while($exibe_ciclo = mysqli_fetch_array($banco3)) { 
