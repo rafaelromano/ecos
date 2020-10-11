@@ -69,7 +69,7 @@
                 while($exibe_pedidos = mysqli_fetch_array($banco)) { 
                     echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_pedidos["Codigo"]."'>".$exibe_pedidos["Codigo"]."</p>";
                     
-                    $codigo = $exibe_pedidos["CI-Codigo"];
+                /*    $codigo = $exibe_pedidos["CI-Codigo"];
                     $banco2 = mysqli_query($conn, "SELECT * FROM `Ciclos` WHERE Codigo='$codigo'"); 
                     echo "<p class='texto'><b>Ciclo:</b><br><select name='ci-codigo'><option value='0'>Selecione...</option>";
                     while($exibe_ciclo = mysqli_fetch_array($banco2)) {
@@ -82,8 +82,8 @@
                     }
                     echo "</select>";
 
-                          
-                    $codigo = $exibe_pedidos["CO-Codigo"];
+                  */        
+                  /*  $codigo = $exibe_pedidos["CO-Codigo"];
                     $banco3 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
                     echo "<p class='texto'><b>Ciclo:</b><br><select name='ci-codigo'><option value='0'>Selecione...</option>";
                     while($exibe_consumidor = mysqli_fetch_array($banco3)) {
@@ -95,7 +95,7 @@
                         echo "<option value='".$exibe_consumidor["Codigo"]."' ".$selecao2.">".$exibe_consumidor["Codigo"]." - ".$exibe_consumidor["Nome"]."</option></p>";
                     }
                     echo "</select>";
-                                        
+                    */                    
                     echo "<p class='texto2'><b> - OBS Consumidor:<br></b></p>":
                     echo "<input type='text' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_pedidos["OBS-Consumidor"].">";
                     if($exibe_pedidos["Forma-Pagamento"] == 1)
