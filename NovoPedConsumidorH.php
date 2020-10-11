@@ -63,7 +63,7 @@
             if($CODIGO<>"")
             {
                               
-                $banco = mysqli_query($conn, "SELECT * FROM Pedidos-Consumidores-Header WHERE Codigo='".$CODIGO."'"); 
+                $banco = mysqli_query($conn, "SELECT * FROM `Pedidos-Consumidores-Header` WHERE Codigo='".$CODIGO."'"); 
                 $total = mysqli_num_rows($banco); 
 
                 while($exibe_pedidos = mysqli_fetch_array($banco)) { 
