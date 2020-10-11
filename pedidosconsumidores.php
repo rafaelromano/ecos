@@ -49,11 +49,19 @@
                 }      
                 
                 echo "<p class='texto2'><b> - OBS Consumidor:<br></b> ".$exibe_pedidos["OBS-Consumidor"]."</p>";
-                //$datafinalgeral= strtotime($exibe_pedidos["Data-fim-geral"]);
-                //$datafinalgeral=date("d-m-Y",$datafinalgeral);
-                //echo "<p class='texto'><b> - Data Final: </b>".$datafinalgeral."</p><br>";*/
-                //echo "<p class='texto'><b> - Data Inicial:</b> ".$exibe_ciclos["Data-inicio-geral"]."</p>";
-                //echo "<p class='texto'><b> - Data Final: </b>".$exibe_ciclos["Data-fim-geral"]."</p><br>";
+                if($exibe_pedidos["Forma-Pagamento"] == 1)
+                        {
+                        $selecao="Cartão de Débito";
+                        }
+                    if else($exibe_pedidos["Forma-Pagamento"] == 2)
+                        {
+                        $selecao="Cartão de Crédito";
+                        }
+                    else
+                        {
+                        $selecao="Dinheiro";
+                        }
+                echo "<p class='texto2'><b> - Forma de Pagamento:<br></b> ".$selecao."</p>";
             } 
             ?>
             <br>
