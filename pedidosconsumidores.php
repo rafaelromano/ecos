@@ -41,7 +41,7 @@
                 //echo $codigo;
                 $banco2 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
                 while($exibe_consumidor = mysqli_fetch_array($banco2)) { 
-                    //echo $exibe_consumidor["Nome"];
+                    echo $exibe_consumidor["Nome"];
                     $consumidor= $exibe_consumidor["None"];
                 }
                 
