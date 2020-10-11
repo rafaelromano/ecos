@@ -42,7 +42,7 @@
                 $banco2 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
                 while($exibe_consumidor = mysqli_fetch_array($banco2)) { 
                     //$consumidor= $exibe_consumidor["None"];
-                    echo "<p class='texto'><b>Consumidor: </b>".$exibe_consumidor["Nome"]."</p>";
+                    echo "<p class='texto2'><b>Consumidor: </b>".$exibe_consumidor["Nome"]."</p>";
                 }      
                 /*$datainiciogeral= strtotime($exibe_pedidos["Data-inicio-geral"]);
                 $datainiciogeral=date("d-m-Y",$datainiciogeral);
