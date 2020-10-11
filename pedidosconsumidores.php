@@ -75,6 +75,7 @@
                         $selecao="Uber";
                         }
                 echo "<p class='texto2'><b> - Tipo de Entrega:<br></b> ".$selecao."</p>";
+                echo "<p class='texto2'><b> - Descrição de Pendência:<br></b> ".$exibe_pedidos["Descricao-Pendencia"]."</p>";
             } 
             ?>
             <br>
