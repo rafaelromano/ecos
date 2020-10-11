@@ -44,83 +44,86 @@
 <table class='table'>
     <tr>
         <td class='td01'>
-            <p class='titulo'>NOVO PRODUTO</p>
+            <p class='titulo'>NOVO PEDIDO CONSUMIDOR</p>
             <?php
             include "conexao.php";
             $CODIGO = $_GET['codigo'];
             if($CODIGO<>"")
                 {
                 ?>
-                <form method="post" action="UpdateProduto.php" name="formulario">
+                <form method="post" action="UpdatePedConsumidorH.php" name="formulario">
                 <?php
                 }
             else
                 {
                 ?>
-                <form method="post" action="InserirProduto.php" name="formulario">
+                <form method="post" action="InserirPedConsumidorH.php" name="formulario">
                 <?php
                 }
             if($CODIGO<>"")
             {
                               
-                $banco = mysqli_query($conn, "SELECT * FROM Produtos WHERE Codigo='".$CODIGO."'"); 
+                $banco = mysqli_query($conn, "SELECT * FROM Pedidos-Consumidores-Header WHERE Codigo='".$CODIGO."'"); 
                 $total = mysqli_num_rows($banco); 
 
-                while($exibe_produtos = mysqli_fetch_array($banco)) { 
-                    echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_produtos["Codigo"]."'>".$exibe_produtos["Codigo"]."</p>";
+                while($exibe_pedidos = mysqli_fetch_array($banco)) { 
+                    echo "<p class='texto'><b>Código:</b><input type='hidden' name='codigo' value='".$exibe_pedidos["Codigo"]."'>".$exibe_pedidos["Codigo"]."</p>";
                     
-                    $banco1 = mysqli_query($conn, "SELECT * FROM Produtores"); 
-                    echo "<p class='texto'><b>Código Produtor:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
-                    while($exibe_produtores = mysqli_fetch_array($banco1)) {
-                        $selecao1=" ";
-                        if($exibe_produtores["Codigo"] == $exibe_produtos["PT-Codigo"])
+                    $codigo = $exibe_pedidos["CI-Codigo"];
+                    $banco3 = mysqli_query($conn, "SELECT * FROM `Ciclos` WHERE Codigo='$codigo'"); 
+                    while($exibe_ciclo = mysqli_fetch_array($banco3)) { 
+                        echo "<p class='texto2'><b>- Ciclo: </b>".$exibe_ciclo["Titulo-ciclo-aberto"]."</p>";
+                    }      
+                    $codigo = $exibe_pedidos["CO-Codigo"];
+                    $banco2 = mysqli_query($conn, "SELECT * FROM `Consumidores` WHERE Codigo='$codigo'"); 
+                    while($exibe_consumidor = mysqli_fetch_array($banco2)) { 
+                        echo "<p class='texto2'><b>- Consumidor: </b>".$exibe_consumidor["Nome"]."</p>";
+                    }      
+                    
+                    echo "<p class='texto2'><b> - OBS Consumidor:<br></b> ".$exibe_pedidos["OBS-Consumidor"]."</p>";
+                    if($exibe_pedidos["Forma-Pagamento"] == 1)
                             {
                             $selecao1="selected";
                             }
-                        echo "<option value='".$exibe_produtores["Codigo"]."' ".$selecao1.">".$exibe_produtores["Codigo"]." - ".$exibe_produtores["Nome"]."</option></p>";
-                    }
-                    echo "</select>";
-
-                    $banco2 = mysqli_query($conn, "SELECT * FROM `Categoria-Produtos`"); 
-                    echo "<p class='texto'><b>Categoria:</b><br><select name='cp-codigo'><option value='0'>Selecione...</option>";
-                    while($exibe_categoria = mysqli_fetch_array($banco2)) { 
-                        $selecao2=" ";
-                        if($exibe_categoria["Codigo"] == $exibe_produtos["CP-Codigo"])
+                        elseif($exibe_pedidos["Forma-Pagamento"] == 2)
                             {
                             $selecao2="selected";
                             }
-                        echo "<option value='".$exibe_categoria["Codigo"]."' ".$selecao2.">".$exibe_categoria["Codigo"]." - ".$exibe_categoria["Descricao"]."</option></p>";
-                    }
-                    echo "</select>";
-
-                    echo "<p class='texto'><b>Descrição:</b><br><input type='text' class='texto' size='20'  maxlength='200' name='descricao' value='".$exibe_produtos["Descricao"]."'></p>";
-                    echo "<p class='texto'><b>Quantidade Disponível:</b><br><input type='text' class='texto' size='5'  maxlength='5' name='qtd-disponivel' value='".$exibe_produtos["Qtd-Disponivel"]."'></p>";
-                    echo "<p class='texto'><b>Custo: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='custo' value='".$exibe_produtos["Custo"]."'></p>*** Usar . para para centavos";
-                    echo "<p class='texto'><b>Preço: R$</b><br><input type='text' class='texto' size='5'  maxlength='10' name='preco' value='".$exibe_produtos["Preco"]."'></p>*** Usar . para para centavos";
-                    if($exibe_pedidos["Forma-Pagamento"] == 1)
+                        else
+                            {
+                            $selecao3="selected";
+                            }
+                    echo "<p class='texto'><b>Forma de Pagamento:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
+                    echo "<select name='pt-codigo' ".$selecao1."><option value='1'>1 - Cartão de Débito</option>";
+                    echo "<select name='pt-codigo' ".$selecao2."><option value='2'>2 - Cartão de Crédito</option>";
+                    echo "<select name='pt-codigo' ".$selecao3."><option value='3'>3 - Uber</option>";        
+                    if($exibe_pedidos["Tipo-Entrega"] == 1)
+                            {
+                            $selecao4="selected";
+                            }
+                        elseif($exibe_pedidos["Tipo-Entrega"] == 2)
+                            {
+                            $selecao5="selected";
+                            }
+                        else
+                            {
+                            $selecao6="selected";
+                            }
+                    echo "<p class='texto'><b>Tipo de Entrega:</b><br><select name='pt-codigo'><option value='0'>Selecione...</option>";
+                    echo "<select name='pt-codigo' ".$selecao4."><option value='1'>1 - Consumidor retira mercadoria</option>";
+                    echo "<select name='pt-codigo' ".$selecao5."><option value='2'>2 - Produtor envia mercadoria</option>";
+                    echo "<select name='pt-codigo' ".$selecao6."><option value='3'>3 - Dinheiro</option>";        
+                    if($exibe_pedidos["Situacao"] == 1)
                         {
-                        $selecao1="checked";
-                        }
-                    if else($exibe_pedidos["Forma-Pagamento"] == 2)
-                        {
-                        $selecao2="checked";
+                        $selecao7="checked";
                         }
                     else
                         {
-                        $selecao3="checked";
+                        $selecao8="checked";
                         }
+                    echo "<p class='texto'><b>Situação:</b><br><input type='radio' name='situacao' value='1' ".$selecao7.">Ativo - <input type='radio' name='situacao' value='0' ".$selecao8.">Inativo<br></p>";      
+                    echo "<p class='texto2'><b> - Descrição de Pendência:<br></b> ".$exibe_pedidos["Descricao-Pendencia"]."</p>";
                     
-                echo "<p class='texto'><b>Situação:</b><br><input type='radio' name='situacao' value='1' ".$selecao1.">Cartão de Debito - <input type='radio' name='situacao' value='0' ".$selecao2.">Fechado<br></p>";      
-                    if($exibe_produtos["Disponibilidade"] == 1)
-                        {
-                        $selecao1="checked";
-                        }
-                    else
-                        {
-                        $selecao2="checked";
-                        }
-                    
-                    echo "<p class='texto'><b>Disponibilidade:</b><br><input type='radio' name='disponibilidade' value='1' ".$selecao1.">Aberto - <input type='radio' name='disponibilidade' value='0' ".$selecao2.">Fechado<br></p>";      
                     } 
             }
             else
@@ -161,7 +164,7 @@
                 {
                     echo "<input type='submit' class='button3' value='CADASTRAR' onclick='return validar()'></form>";
                 }
-                echo "&nbsp;&nbsp;&nbsp;<a href='produtos.php'><button class='button3'>CANCELAR</button></a>";
+                echo "&nbsp;&nbsp;&nbsp;<a href='pedidosconsumidores.php'><button class='button3'>CANCELAR</button></a>";
                 
                 mysqli_close($conn);
                 ?>

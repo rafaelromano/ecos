@@ -66,7 +66,7 @@
                         {
                         $selecao="Consumidor retira mercadoria";
                         }
-                    elseif($exibe_pedidos["Forma-Pagamento"] == 2)
+                    elseif($exibe_pedidos["Tipo-Entrega"] == 2)
                         {
                         $selecao="Produtor envia mercadoria";
                         }
